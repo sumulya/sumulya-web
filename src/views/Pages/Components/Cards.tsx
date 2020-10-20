@@ -10,8 +10,8 @@ const Cards: FC = () => {
 
     return (
         <div className="allcards">
-            <h3>All Products</h3>
-            <div className="card">
+            <h3>All Products </h3>
+            <div className="card" >
                 <Card
                     // title={<div className="cardFunc"
                     //     style={{ textAlign: 'center', backgroundColor: '#303030', color: 'white', borderRadius: '10px', height: '30px', marginTop: '-15px' }}
@@ -133,7 +133,7 @@ const Cards: FC = () => {
                     hoverable
                     extra={<ShoppingOutlined style={{ fontSize: "15px" }} />}
                     style={{ width: 200 }}
-                    cover={<img alt="example" src="https://sumulya.s3.ap-south-1.amazonaws.com/media/products/202007-1408-4808-rahar-dal.png" />}
+                    cover={<img alt="example " src="https://sumulya.s3.ap-south-1.amazonaws.com/media/products/202007-1408-4808-rahar-dal.png" />}
                 >
                     <Meta className="metacard" title="रु 170" description="RAHAR DAAL 'A' GRADE (1 KG)" />
                 </Card>
