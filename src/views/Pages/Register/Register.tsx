@@ -40,8 +40,12 @@ const Login: FC = () => (
 
                 </Form.Item>
                 <Form.Item
+                    name="email"
                     style={{ marginBottom: "5px" }}
                     rules={[
+                        {
+                            type: 'email', message: 'The input is not valid E-mail!',
+                        },
                         { required: true, message: "Please input your email!" }
                     ]}
                 >
@@ -56,10 +60,12 @@ const Login: FC = () => (
                 </Form.Item>
 
                 <Form.Item
+                    name="password"
                     style={{ marginBottom: "5px" }}
                     rules={[
                         { required: true, message: "Please input your password!" }
                     ]}
+                    hasFeedback
                 >
                     <Input.Password
                         placeholder="Password"
@@ -72,13 +78,23 @@ const Login: FC = () => (
                 </Form.Item>
 
                 <Form.Item
+                    name="confirm"
+                    hasFeedback
                     style={{ marginBottom: "5px" }}
                     rules={[
-                        { required: true, message: "Please input your password!" }
+                        { required: true, message: "Please confirm your password!" },
+                        ({ getFieldValue }) => ({
+                            validator(rule, value) {
+                                if (!value || getFieldValue('password') === value) {
+                                    return Promise.resolve();
+                                }
+                                return Promise.reject('The two passwords that you entered do not match!');
+                            },
+                        }),
                     ]}
                 >
                     <Input.Password
-                        placeholder="Confirm Passwprd"
+                        placeholder="Confirm Password"
                         name="confirmPassword"
                     //   onChange={handleChange}
                     />

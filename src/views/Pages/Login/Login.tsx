@@ -13,8 +13,12 @@ const Login: FC = () => (
         <div className="emailForm">
             <Form name="basic" style={{ width: '300px' }} initialValues={{ remember: true }}>
                 <Form.Item
+                    name="email"
                     style={{ marginBottom: '8px' }}
                     rules={[
+                        {
+                            type: 'email', message: 'The input is not valid E-mail!',
+                        },
                         { required: true, message: "Please input your email!" }
                     ]}
                 >
@@ -29,10 +33,12 @@ const Login: FC = () => (
                 </Form.Item>
 
                 <Form.Item
+                    name="password"
                     style={{ marginBottom: '8px' }}
                     rules={[
                         { required: true, message: "Please input your password!" }
                     ]}
+                    hasFeedback
                 >
                     <Input.Password
                         name="password"
