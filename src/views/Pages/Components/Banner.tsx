@@ -5,10 +5,10 @@ import { Carousel } from 'antd';
 const Banner: FC = () => (
     <Carousel dotPosition="top" autoplay>
         <div className="carousel">
-            <h3><img src="/images/banner1.png" /></h3>
+            <h3><img alt="banner" src="/images/banner1.png" /></h3>
         </div>
         <div className="carousel">
-            <h3><img src="/images/banner2.jpg" /></h3>
+            <h3><img alt="banner" src="/images/banner2.jpg" /></h3>
         </div>
     </Carousel>
 );

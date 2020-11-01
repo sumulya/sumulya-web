@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import './../../App.css';
 import { Menu, Layout } from 'antd';
+import { Link } from 'react-router-dom';
 import { NotificationOutlined, AppleFilled, UserOutlined, ShoppingOutlined, CoffeeOutlined, ClearOutlined, MedicineBoxOutlined } from '@ant-design/icons';
 const { SubMenu } = Menu;
 const { Sider } = Layout;
@@ -14,9 +15,9 @@ const Side: FC = () => (
             style={{ height: '100%' }}
         ><h3 style={{ margin: "20px 10px" }}>All Categories</h3>
             <SubMenu key="sub1" icon={<AppleFilled />} style={{ fontWeight: "bold" }} title="Vegetables &amp; Fruits">
-                <Menu.Item key="1">-Fruits</Menu.Item>
-                <Menu.Item key="2">-Vegetables</Menu.Item>
-                <Menu.Item key="3">-Gundruk &amp; Sinki</Menu.Item>
+                <Menu.Item key="1"><Link to="/category/1">-Fruits</Link></Menu.Item>
+                <Menu.Item key="2"><Link to="/category/2">-Vegetables</Link></Menu.Item>
+                <Menu.Item key="3"><Link to="/category/3">-Gundruk &amp; Sinki</Link></Menu.Item>
             </SubMenu>
             <SubMenu key="sub2" icon={<UserOutlined />} style={{ fontWeight: "bold" }} title="Personal Care">
                 <Menu.Item key="4">-Hygiene</Menu.Item>
