@@ -14,7 +14,6 @@ const Cards: FC = () => {
     const [cartItem, setCartItem] = useState({});
 
 
-    useEffect(() => { }, []);
 
     const handleAdd = (product: Product) => {
         const index = products.indexOf(product);
@@ -33,6 +32,7 @@ const Cards: FC = () => {
         setCartCount({ products });
 
     }
+    console.log(cartItem);
 
 
     return (
@@ -45,9 +45,8 @@ const Cards: FC = () => {
                         <Card
                             title={
                                 (product.count > 0) ? (
-                                    <div className="cardFunc"
-
-                                    ><MinusOutlined
+                                    <div className="cardFunc">
+                                        <MinusOutlined
                                             onClick={() => handleSubtract(product)}
                                             style={{ marginRight: '20px' }}
                                         />
@@ -55,7 +54,8 @@ const Cards: FC = () => {
                                         <PlusOutlined
                                             onClick={() => handleAdd(product)}
                                             style={{ marginLeft: '20px' }}
-                                        /></div>
+                                        />
+                                    </div>
                                 ) : (<div></div>)
                             }
 

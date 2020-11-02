@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useContext } from 'react';
 import './../../App.css';
 import { Link } from 'react-router-dom';
 import { Badge, Input, Layout, Drawer } from 'antd';
@@ -26,9 +26,9 @@ const Head: FC = () => {
                     </Link>
                 </div>
                 <div className="searchbox">
-                    <Search style={{ width: "75%", marginTop: "18px" }} placeholder="Search Products In Sumulya" onSearch={value => console.log(value)} enterButton />
+                    <Search style={{ width: "75%" }} placeholder="Search Products In Sumulya" onSearch={value => console.log(value)} enterButton />
                 </div>
-                <div className="rightHead" style={{ float: "right", marginTop: "-65px" }}>
+                <div className="rightHead">
                     <Link to="/login">
                         <UserOutlined style={{ padding: "0 20px", fontSize: "20px", color: 'black' }} />
                     </Link>
@@ -39,22 +39,22 @@ const Head: FC = () => {
                             placement="right"
                             onClose={onClose}
                             visible={visible}
-                            width={350}
+                            width={400}
                             maskStyle={{ opacity: 0, transition: "opacity 1s" }}
                             style={{ marginTop: "65px" }}
                         >
                             <div className="cartItems">
                                 <div className="leftCart">
-                                    <img alt="cart- img" src="/abc" />
+                                    <img alt="cart- img" src="https://upload.wikimedia.org/wikipedia/en/f/f9/Twix-Wrapper-Small.jpg" />
                                 </div>
                                 <div className="middleCart">
                                     Product Name<br />
-                                    Unit Price
+                                    रु xxxx
                                 </div>
                                 <div className="rightCart">
                                     <div className="totalPrice">
-                                        Total Price
-                                        </div>
+                                        <b>रु xxxx</b>
+                                    </div>
                                     <div className="cartControl">
                                         <MinusOutlined style={{ marginRight: '15px' }} />1<PlusOutlined style={{ marginLeft: '15px' }} />
                                     </div>
