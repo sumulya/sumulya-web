@@ -32,7 +32,7 @@ const Head: FC = () => {
                     <Link to="/login">
                         <UserOutlined style={{ padding: "0 20px", fontSize: "20px", color: 'black' }} />
                     </Link>
-                    <Badge count={0} showZero>
+                    <Badge count={3} showZero>
                         <ShoppingCartOutlined onClick={showDrawer} style={{ fontSize: "20px", paddingRight: "7px" }} />
                         <Drawer
                             title={<b>Cart</b>}
