@@ -18,7 +18,6 @@ const App: FC = () => (
         <Route path="/detail/:id" exact component={Detail} />
       </Switch>
     </Router>
-
   </div>
 );
 
