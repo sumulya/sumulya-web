@@ -1,8 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import Foot from '../../Partials/Foot';
 import Head from '../../Partials/Head';
-import { Typography, Form, Input, Button } from 'antd';
-import CheckableTag from "antd/lib/tag/CheckableTag";
+import { Typography, Form, Input, Button, Tag } from 'antd';
+// import CheckableTag from "antd/lib/tag/CheckableTag";
+import { cartProducts } from './../../../Data/products';
+import { Product } from './../../../Interfaces/index';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import './../../../App.css';
 
@@ -11,54 +13,48 @@ const { Text, Title } = Typography;
 
 const Cart: FC = () => {
 
+    const [cartCount, setCartCount] = useState({});
+
+    const handleAdd = (product: Product) => {
+        const index = cartProducts.indexOf(product);
+        cartProducts[index] = { ...product };
+        cartProducts[index].count++;
+        setCartCount({ cartProducts });
+    }
+
+    const handleSubtract = (product: Product) => {
+        const index = cartProducts.indexOf(product);
+        cartProducts[index] = { ...product };
+        cartProducts[index].count--;
+        setCartCount({ cartProducts });
+    }
+
     return (
         <div className="cartPage">
             <Head />
             <div className="cart">
-                <div className="cartProduct">
-                    <div className="checkoutItem">
-                        <div className="checkoutItemImg">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Twix-Wrapper-Small.jpg" alt="" />
-                        </div>
-                        <div className="checkoutItemName">
-                            TWIX BAR<br />
-                            <b>रु xxxx</b>
-                        </div>
-                        <div className="checkoutItemCounter">
-                            <div className="cartControl" style={{ marginTop: '0px' }}>
-                                <MinusOutlined style={{ marginRight: '20px' }} />1<PlusOutlined style={{ marginLeft: '20px' }} />
+                {cartProducts.map((cartproduct, key) => {
+                    return (
+                        <div className="cartProduct">
+                            <div className="checkoutItem">
+                                <div className="checkoutItemImg">
+                                    <img src={cartproduct.imgsrc} alt="" />
+                                </div>
+                                <div className="checkoutItemName">
+                                    {cartproduct.name}<br />
+                                    <b>रु xxxx</b>
+                                </div>
+                                <div className="checkoutItemCounter">
+                                    <div className="cartControl" style={{ marginTop: '0px' }}>
+                                        <MinusOutlined onClick={() => handleSubtract(cartproduct)} style={{ marginRight: '20px' }} />
+                                        {cartproduct.count}
+                                        <PlusOutlined onClick={() => handleAdd(cartproduct)} style={{ marginLeft: '20px' }} />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="checkoutItem">
-                        <div className="checkoutItemImg">
-                            <img src="https://sumulya.s3.ap-south-1.amazonaws.com/media/products/202007-0911-0519-organic-cashew-500x500.png" alt="" />
-                        </div>
-                        <div className="checkoutItemName">
-                            HAND PICKED CASHEW<br />
-                            <b>रु xxxx</b>
-                        </div>
-                        <div className="checkoutItemCounter">
-                            <div className="cartControl" style={{ marginTop: '0px' }}>
-                                <MinusOutlined style={{ marginRight: '20px' }} />1<PlusOutlined style={{ marginLeft: '20px' }} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="checkoutItem">
-                        <div className="checkoutItemImg">
-                            <img src="https://sumulya.s3.ap-south-1.amazonaws.com/media/products/202007-0510-3953-hypercity-every-day-sugar-loose-v-1-kg.png" alt="" />
-                        </div>
-                        <div className="checkoutItemName">
-                            SUGAR A GRADE (1 KG)<br />
-                            <b>रु xxxx</b>
-                        </div>
-                        <div className="checkoutItemCounter">
-                            <div className="cartControl" style={{ marginTop: '0px' }}>
-                                <MinusOutlined style={{ marginRight: '20px' }} />1<PlusOutlined style={{ marginLeft: '20px' }} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    );
+                })}
                 <div className="cartPrice">
                     <div className="cartHeaderItem">
                         <Text style={{ fontSize: '15px' }}>{`Sub Total`}</Text>
@@ -109,8 +105,8 @@ const Cart: FC = () => {
 
                     <Text type="secondary">Payment on delivery with </Text>
                     <br />
-                    <CheckableTag className="checkableTag" checked={true}>Cash</CheckableTag>
-                    <CheckableTag className="checkableTag" checked={true}>E-Sewa</CheckableTag>
+                    <Tag color="#108ee9" className="Tag">Cash</Tag>
+                    <Tag color="#87d068" className="Tag">E-Sewa</Tag>
                     <br /><br />
                     <Text type="secondary">Please fill up the following information so that we can call you for your delivery information.</Text>
                     <br />
@@ -167,7 +163,7 @@ const Cart: FC = () => {
                 )} */}
                         </Form.Item>
                     </Form>
-                    <br />
+
                     <Button className="sumbitButton"
                         style={{ width: '100%', backgroundColor: '#e85733', color: 'white' }}
                     >
@@ -175,7 +171,7 @@ const Cart: FC = () => {
                     </Button>
                 </div>
             </div>
-            <div className="footer" style={{ bottom: '0' }}>
+            <div className="footer" style={{ bottom: '0', position: 'fixed' }}>
                 <Foot />
             </div>
         </div>

@@ -2,7 +2,7 @@ import React, { FC, useState, useContext } from 'react';
 import './../../App.css';
 import { Link } from 'react-router-dom';
 import { Badge, Input, Layout, Drawer } from 'antd';
-import { UserOutlined, ShoppingCartOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons';
+import { UserOutlined, ShoppingCartOutlined, PlusOutlined, MinusOutlined, ArrowRightOutlined, CloseCircleFilled } from '@ant-design/icons';
 import { cartProducts } from './../../Data/products';
 import { Product } from './../../Interfaces/index';
 const { Search } = Input;
@@ -55,6 +55,7 @@ const Head: FC = () => {
                         <Drawer
                             title={<b>Cart</b>}
                             placement="right"
+                            closeIcon={<CloseCircleFilled />}
                             onClose={onClose}
                             visible={visible}
                             width={400}
@@ -99,8 +100,8 @@ const Head: FC = () => {
                             })}
                             <Link to="/cart">
                                 <div className="checkout">
-                                    Checkout
-                            </div></Link>
+                                    Proceed To Checkout <ArrowRightOutlined style={{ margin: '5px 10px' }} />
+                                </div></Link>
                         </Drawer>
                     </Badge>
                 </div>
