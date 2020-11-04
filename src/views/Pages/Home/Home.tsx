@@ -5,6 +5,7 @@ import Banner from '../Components/Banner';
 import Cards from '../Components/Cards';
 import Head from '../../Partials/Head';
 import Foot from '../../Partials/Foot';
+import ProductGroupSection from './ProductGroupSection';
 
 const { Content } = Layout;
 
@@ -24,14 +25,17 @@ const Home: FC = () => (
                         {/* Carousel*/}
                         <Banner />
 
-                        <Content style={{ margin: "10px 0", backgroundColor: "white", padding: '20px 20px', minHeight: 280 }}>
+                        {/* <Content style={{ margin: "10px 0", backgroundColor: "white", padding: '20px 20px', minHeight: 280 }}> */}
 
-                            {/* All Cards */}
-                            <Cards />
+                        {/* All Cards */}
+                        {/* <Cards />
                             <div style={{ textAlign: 'center', marginTop: '10px' }}>
                                 <Button>Show More</Button>
                             </div>
-                        </Content>
+                        </Content> */}
+
+                        <ProductGroupSection />
+
                     </Content>
 
                 </Layout>

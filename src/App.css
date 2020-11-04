@@ -111,4 +111,131 @@
     }
 
 
+.productGroupWrapper {
+    margin: 5px 40px 40px;
+    padding: 0px 10px 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px #dcdcdc;
 
+    @media screen and (max-width: 768px) {
+        margin: 0 0px 5px 0;
+        padding: 0px 5px 0px;
+    }
+}
+
+.productGroupWrapper .productGroupInfo .h3 {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.productGroupSeeAll {
+    text-align: right;
+    padding: 2px;
+}
+
+.productGroupSeeAll a {
+    font-weight: 600;
+    text-decoration: underline;
+    color: #e96125;
+
+    @media screen and (max-width: 768px) {
+        font-weight: 100;
+    }
+}
+
+.productListWrapper {
+    background-color: #fff;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.productListWrapper .productList {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 500px;
+}
+
+.productListWrapper .productList .product {
+    margin: 5px;
+    @media screen and (max-width: 380px) {
+        margin: 1px;
+    }
+}
+
+.productListWrapper .productList.noWrapp {
+    flex-wrap: nowrap;
+    min-width: unset;
+    justify-content: flex-start;
+}
+
+.productListWrapper .productWrapper {
+    height: fit-content;
+    width: 167px;
+    box-shadow: #ddd 0px 0px 3px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+
+    @media screen and (max-width: 768px) {
+        width: 150px;
+        padding: 5px;
+    }
+}
+
+.productListWrapper .productWrapper .productDetail {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+
+    @media screen and (max-width: 768px) {
+        height: 95px;
+    }  
+}
+
+.productListWrapper .productWrapper .productDetail .productName {
+    font-size: 11px;
+    height: 51px;
+    overflow: hidden;
+}
+
+.productListWrapper .productWrapper .productDetail .productUnit {
+    font-size: 12px;
+}
+
+.productListWrapper .productList .noWrapp {
+    flex-wrap: nowrap;
+    min-width: unset;
+    justify-content: flex-start;
+}
+
+.productListWrapper .ant-carousel .slick-dots {
+    width: 100% !important;
+    bottom: 20px !important;
+}
+
+.productListWrapper .ant-carousel .slick-dots li button {
+    height: 8px !important;
+}
+
+.productListWrapper .productTop {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    flex-direction: column;
+    align-items: center;
+    height: 110px;
+    cursor: pointer;
+}
+
+.productListWrapper .productTop .img {
+    max-height: 110px;
+    max-width: 110px;
+
+    @media screen and (max-width: 768px) {
+        max-height: 70px;
+        max-width: 80px;
+    }
+}
