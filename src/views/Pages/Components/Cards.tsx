@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState } from 'react';
 import './../../../App.css';
 import { Card } from 'antd';
 import { ShoppingOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons';
@@ -13,6 +13,8 @@ const Cards: FC = () => {
     const [cartCount, setCartCount] = useState({});
     const [cartItem, setCartItem] = useState({});
 
+    console.log(cartCount);
+    console.log(cartItem);
 
 
     const handleAdd = (product: Product) => {

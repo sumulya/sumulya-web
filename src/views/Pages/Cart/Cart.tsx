@@ -14,6 +14,7 @@ const { Text, Title } = Typography;
 const Cart: FC = () => {
 
     const [cartCount, setCartCount] = useState({});
+    console.log(cartCount);
 
     const handleAdd = (product: Product) => {
         const index = cartProducts.indexOf(product);

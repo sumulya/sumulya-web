@@ -14,7 +14,7 @@
 
 .logo img {
     height: 55px; 
-    margin-left: -525px;
+    margin-left: -42%;
 }
 
 .rightHead{
@@ -27,7 +27,11 @@
     color: #fff;
     line-height: 300px;
     text-align: center;
-    background: #364d79 ;
+}
+
+.carousel img{
+   object-fit: cover;
+   height: auto;
 }
 
 
