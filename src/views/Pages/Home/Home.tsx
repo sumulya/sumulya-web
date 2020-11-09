@@ -20,7 +20,7 @@ const Home: FC = () => (
                     {/* Sider Component */}
                     <Side />
 
-                    <Content style={{ padding: '0 20px' }}>
+                    <Content style={{ marginLeft: 250, marginTop: 64 }}>
 
                         {/* Carousel*/}
                         <Banner />
