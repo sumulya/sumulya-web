@@ -1,16 +1,13 @@
 import React, { FC } from 'react';
-import Foot from '../../Partials/Foot';
-import Head from '../../Partials/Head';
 import { Form, Input, Button } from 'antd';
 import { Link } from 'react-router-dom';
 import './../../../App.css';
+import MainLayout from '../../Layouts/MainLayout';
 
 
 const Login: FC = () => (
-    <div className="login">
-        <Head />
-
-        <div className="emailForm">
+    <MainLayout>
+        <div className="emailForm" style={{ padding: '24px 0' }}>
             <Form name="basic" style={{ width: '300px' }} initialValues={{ remember: true }}>
                 <Form.Item
                     name="email"
@@ -81,15 +78,7 @@ const Login: FC = () => (
                 </div>
             </div>
         </div>
-
-
-
-        <div className="footer" style={{ position: "fixed", bottom: '0' }}>
-            <Foot />
-        </div>
-
-    </div>
-
+    </MainLayout>
 );
 
 
