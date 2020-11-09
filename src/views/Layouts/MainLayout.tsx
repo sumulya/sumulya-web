@@ -9,7 +9,7 @@ const MainLayout: FC = (props) => {
     return (
         <div className="mainlayout">
             {/* Head Component  */}
-            < Head />
+            <Head />
 
             <Layout style={{ flex: 1 }}>{props.children}</Layout>
 

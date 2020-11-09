@@ -35,35 +35,35 @@ const UserProfile: FC = (props: any) => {
 
     return (
         <MainLayout>
-            <div className="mainContainer" style={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+            <div className="mainContainer" style={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                 <div className="userWrapper">
-                    <div className="userInfo" style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-                        <div style={{ width: "500px" }}>
+                    <div className="userInfo">
+                        <div className="profileDetails">
                             <Col span={11}>
                                 <div className="avatar">
                                     <span className="avatar-item">
                                         <Badge>
-                                        {imageUrls.length ? (
-                                            <img
-                                            src={`D:/node/react/logistic/src/uploads/1589796118823-aaaaaaaaaaaaaaaaaaaaaaaa.jfif`}
-                                            />
-                                        ) : (
-                                            <Avatar
-                                            shape="square"
-                                            icon={<UserOutlined />}
-                                            style={{
-                                                height: "90px",
-                                                width: "98px",
-                                                fontSize: "72px"
-                                            }}
-                                            />
-                                        )}
+                                            {imageUrls.length ? (
+                                                <img
+                                                    src={imageUrls[0]}
+                                                />
+                                            ) : (
+                                                    <Avatar
+                                                        shape="square"
+                                                        icon={<UserOutlined />}
+                                                        style={{
+                                                            height: "90px",
+                                                            width: "98px",
+                                                            fontSize: "72px"
+                                                        }}
+                                                    />
+                                                )}
                                         </Badge>
                                     </span>
                                 </div>
 
                                 <div>
-                                    <div style={{ paddingTop: "10px" }}>
+                                    {/* <div style={{ paddingTop: "10px" }}>
                                         <Form.Item>
                                             <input
                                                 type="file"
@@ -71,12 +71,12 @@ const UserProfile: FC = (props: any) => {
                                                 className="form-control"
                                                 onChange={handleImageChange}
                                             />
-                                            {/* {errors.image && (
+                                            {errors.image && (
                                                 <div className="validation">{errors.image}</div>
-                                            )} */}
-                                    </Form.Item>
-                                    </div>
-                                    <div className="userDetails" style={{ width: "247px" }}>
+                                            )}
+                                        </Form.Item>
+                                    </div> */}
+                                    <div className="userDetails" style={{ width: "235px" }}>
                                         <Form.Item label="First Name" style={{ margin: "0px" }}>
                                             <Paragraph
                                                 editable={{
@@ -132,11 +132,10 @@ const UserProfile: FC = (props: any) => {
                                     </div>
                                 </div>
                             </Col>
+                        </div>
 
-                            <Button block onClick={handleSubmit}>
-                                Update
-                            </Button>
-
+                        <div className="profileActivities">
+                            <div>Hi, I am {user && user.firstName}</div>
                         </div>
                     </div>
                 </div>

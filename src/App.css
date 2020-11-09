@@ -116,14 +116,40 @@
     background-color: #fff;
     border-radius: 3px;
     padding: 10px 10px 10px;
+    width: 80%;
+    height: 100%;
 }
 
 .userWrapper .userInfo {
     display: flex;
     justify-content: center;
-    /* padding-top: 30px;
-    padding-bottom: 30px; */
     padding: 30px 80px;
-    margin: 11px 0 0 0;
     background-color: white;
+}
+
+.userWrapper .userInfo .profileDetails {
+    display: flex;
+    padding: 30px;
+    background-color: white;
+    border: solid 1px;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.2);
+    flex: 1;
+}
+
+.userWrapper .userInfo .profileDetails .avatar {
+    display: flex;
+    justify-content: center;
+}
+
+.userWrapper .userInfo .profileActivities {
+    display: flex;
+    padding: 30px;
+    background-color: white;
+    flex: 2;
+}
+
+.mainlayout {
+    display: flex;
+    flex-direction: column;
 }
