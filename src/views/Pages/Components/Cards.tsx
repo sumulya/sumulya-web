@@ -43,7 +43,6 @@ const Cards: FC = () => {
                 return (
                     <div className="card" key={product.id}>
                         <Card
-                            bordered={false}
                             title={
                                 (product.count > 0) ? (
                                     <div className="cardFunc">
@@ -68,6 +67,7 @@ const Cards: FC = () => {
                                 ) : (<div></div>)
                             }
                             hoverable
+                            bordered={false}
                             style={{ width: 200 }}
                             cover={<img alt="example" src={product.imgsrc} />}
                         >
