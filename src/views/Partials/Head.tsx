@@ -61,10 +61,10 @@ const Head: FC = () => {
                             visible={visible}
                             width={400}
                             maskStyle={{ opacity: 0, transition: "opacity 1s" }}
-                            style={{ marginTop: "65px" }}
+                            style={{ marginTop: "64px" }}
                         >
                             <div className="totalCartPrice">
-                                &nbsp; Total Amount : <b style={{ float: 'right', marginRight: '20px' }}>रु xxxx</b>
+                                Total Amount : <b style={{ float: 'right', marginRight: '20px' }}>रु xxxx</b>
                             </div>
                             {cartProducts.map((cartproduct, key) => {
                                 return (
