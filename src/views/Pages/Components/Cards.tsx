@@ -43,6 +43,7 @@ const Cards: FC = () => {
                 return (
                     <div className="card" key={product.id}>
                         <Card
+                            bordered={false}
                             title={
                                 (product.count > 0) ? (
                                     <div className="cardFunc">

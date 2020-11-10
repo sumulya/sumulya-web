@@ -30,8 +30,8 @@ const Home: FC = () => (
                             {/* All Cards */}
                             <h3>All Products</h3>
                             <Cards />
-                            <div style={{ textAlign: 'center', marginTop: '15px' }}>
-                                <Button icon={<DownCircleOutlined />}>Show More</Button>
+                            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                                <Button style={{ borderRadius: '10px', fontWeight: 'bold' }} icon={<DownCircleOutlined />}>Show More</Button>
                             </div>
                         </Content>
                     </Content>

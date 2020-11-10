@@ -166,7 +166,7 @@ const Cart: FC = () => {
                     </Form>
 
                     <Button className="sumbitButton"
-                        style={{ width: '100%', backgroundColor: '#e85733', color: 'white' }}
+                        style={{ width: '100%', backgroundColor: '#e85733', color: 'white', borderRadius: '10px' }}
                     >
                         <PlusOutlined />PLACE ORDER
                     </Button>
