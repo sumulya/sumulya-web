@@ -7,12 +7,22 @@ import { Layout } from 'antd';
 const MainLayout: FC = (props) => (
     <div className="mainlayout">
         {/* Head Component  */}
-        < Head />
+        {/* < Head /> */}
 
-        <Layout style={{ flex: 1 }}>{props.children}</Layout>
+        {/* <Layout style={{ flex: 1 }}>{props.children}</Layout> */}
 
         {/* Footer Component */}
-        <Foot />
+        {/* <Foot /> */}
+
+
+        <Layout>
+            <Head />
+
+            {props.children}
+
+            <Foot />
+        </Layout>
+
     </div>
 );
 
