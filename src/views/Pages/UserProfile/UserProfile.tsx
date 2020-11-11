@@ -1,9 +1,10 @@
 import React, { FC, useState, useEffect } from 'react';
-import { Form, Avatar, Badge, Input, Button, Col } from 'antd';
+import { Avatar, Badge, Col, Typography, Space, Row } from 'antd';
 import { UserOutlined } from "@ant-design/icons";
 import './../../../App.css';
-import Paragraph from "antd/lib/typography/Paragraph";
 import MainLayout from "../../Layouts/MainLayout"
+
+const { Title, Text } = Typography;
 
 
 const UserProfile: FC = (props: any) => {
@@ -35,114 +36,59 @@ const UserProfile: FC = (props: any) => {
 
     return (
         <MainLayout>
-            <div className="mainContainer" style={{ display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-                <div className="userWrapper">
-                    <div className="userInfo">
+            <div className="userWrapper">
+                <Row>
+                    <Col span={5} push={2}>
                         <div className="profileDetails">
-                            <Col span={11}>
-                                <div className="avatar">
-                                    <span className="avatar-item">
-                                        <Badge>
-                                            {imageUrls.length ? (
-                                                <img
-                                                    src={imageUrls[0]}
-                                                />
-                                            ) : (
-                                                    <Avatar
-                                                        shape="square"
-                                                        icon={<UserOutlined />}
-                                                        style={{
-                                                            height: "90px",
-                                                            width: "98px",
-                                                            fontSize: "72px"
-                                                        }}
-                                                    />
-                                                )}
-                                        </Badge>
-                                    </span>
-                                </div>
-
-                                <div>
-                                    {/* <div style={{ paddingTop: "10px" }}>
-                                        <Form.Item>
-                                            <input
-                                                type="file"
-                                                name="image"
-                                                className="form-control"
-                                                onChange={handleImageChange}
+                            <div className="avatar">
+                                <span className="avatar-item">
+                                    <Badge>
+                                        {imageUrls.length ? (
+                                            <img
+                                                src={imageUrls[0]}
                                             />
-                                            {errors.image && (
-                                                <div className="validation">{errors.image}</div>
+                                        ) : (
+                                                <Avatar
+                                                    shape="circle"
+                                                    icon={<UserOutlined />}
+                                                    style={{
+                                                        height: "150px",
+                                                        width: "150px",
+                                                        fontSize: "72px"
+                                                    }}
+                                                />
                                             )}
-                                        </Form.Item>
-                                    </div> */}
-                                    <div className="userDetails" style={{ width: "235px" }}>
-                                        <Form.Item label="First Name" style={{ margin: "0px" }}>
-                                            <Paragraph
-                                                editable={{
-                                                    onChange: value => onUserChange("firstName", value)
-                                                }}
-                                                style={{ margin: "0px" }}
-                                            >
-                                                {user && user.firstName}
-                                            </Paragraph>
-                                            {/* {errors.firstName && (
-                                                <div className="validation">{errors.firstName}</div>
-                                            )} */}
-                                        </Form.Item>
-                                        <Form.Item label="Last Name" style={{ margin: "0px" }}>
-                                            <Paragraph
-                                                editable={{
-                                                    onChange: value => onUserChange("lastName", value)
-                                                }}
-                                                style={{ margin: "0px" }}
-                                            >
-                                                {user.lastName && user.lastName}
-                                            </Paragraph>
-                                            {/* {errors.lastName && (
-                                                <div className="validation">{errors.lastName}</div>
-                                            )} */}
-                                        </Form.Item>
-                                        <Form.Item label="Email" style={{ margin: "0px" }}>
-                                            <Paragraph
-                                                editable={{
-                                                    onChange: value => onUserChange("email", value)
-                                                }}
-                                                style={{ margin: "0px" }}
-                                            >
-                                                {user.email && user.email}
-                                            </Paragraph>
-                                            {/* {errors.email && (
-                                                <div className="validation">{errors.email}</div>
-                                            )} */}
-                                        </Form.Item>
-                                        <Form.Item label="Phone" style={{ margin: "0px" }}>
-                                            <Paragraph
-                                                editable={{
-                                                    onChange: value => onUserChange("phone", value)
-                                                }}
-                                                style={{ margin: "0px" }}
-                                            >
-                                                {user.phone && user.phone}
-                                            </Paragraph>
-                                            {/* {errors.phone && (
-                                                <div className="validation">{errors.phone}</div>
-                                            )} */}
-                                        </Form.Item>
-                                    </div>
-                                </div>
-                            </Col>
-                        </div>
+                                    </Badge>
+                                </span>
+                                <div className="avatar-update-button">Update Photo</div>
+                            </div>
 
-                        <div className="profileActivities">
-                            <div>Hi, I am {user && user.firstName}</div>
+                            <div>
+                                <div className="info">
+                                    <Space direction="vertical">
+                                        <Title level={4}>{user && user.firstName} {user && user.lastName}</Title>
+                                        <Text><b>Email:</b> {user && user.email}</Text>
+                                        <Text><b>Phone No.:</b> {user && user.phone}</Text>
+                                    </Space>
+                                </div>
+                            </div>
+                            <div className="user-update-button">Edit Profile</div>
                         </div>
+                    </Col>
+                    <Col span={18} push={2}>
+                        <div className="profileActivities">
+                            <Title level={1}>Hi, I'm {user && user.firstName}</Title>
+
+                            <h2>About</h2>
+                        Lives in Kathmandu, Nepal
                     </div>
-                </div>
+                    </Col>
+                </Row>
             </div>
         </MainLayout>
     )
 };
+
 
 
 export default UserProfile;

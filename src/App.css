@@ -102,54 +102,62 @@
     color: black;
 }
 
-    .logoWeapper{
-        position: relative;
-    }
+.logoWeapper{
+    position: relative;
+}
 
-    .logoWeapper img{
-        height:100px;
-    }
+.logoWeapper img{
+    height:100px;
+}
 
 
 .userWrapper {
-    margin: 10px 40px;
     background-color: #fff;
     border-radius: 3px;
-    padding: 10px 10px 10px;
-    width: 80%;
+    padding: 80px 200px;
+    width: 100%;
     height: 100%;
 }
 
-.userWrapper .userInfo {
-    display: flex;
-    justify-content: center;
-    padding: 30px 80px;
-    background-color: white;
-}
-
-.userWrapper .userInfo .profileDetails {
-    display: flex;
-    padding: 30px;
+.profileDetails {
+    padding: 50px;
     background-color: white;
     border: solid 1px;
     border-radius: 10px;
     border-color: rgba(0, 0, 0, 0.2);
-    flex: 1;
 }
 
-.userWrapper .userInfo .profileDetails .avatar {
-    display: flex;
-    justify-content: center;
-}
-
-.userWrapper .userInfo .profileActivities {
-    display: flex;
-    padding: 30px;
+.profileActivities {
+    padding: 0px 50px ;
     background-color: white;
-    flex: 2;
 }
 
 .mainlayout {
     display: flex;
     flex-direction: column;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.avatar .avatar-item {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar .avatar-update-button {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    margin: 16px;
+}
+
+.profileDetails .user-update-button {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: underline;
+    margin: 16px 0px 0px 0px; 
 }
