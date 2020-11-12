@@ -9,9 +9,18 @@ import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import './../../../App.css';
 
 const { Text, Title } = Typography;
+const tagsFromServer = ['Cash', 'E-Sewa'];
 
 
 const Cart: FC = () => {
+
+    // const [selectedtag, setselectedTag] = useState([]);
+
+    // const handleChange = (tag: string, checked: boolean) => {
+    //     const nextSelectedTag = checked ? [...selectedtag, tag] : selectedtag.filter(t => t !== tag);
+    //     setselectedTag(nextSelectedTag);
+
+    // }
 
     const [cartCount, setCartCount] = useState({});
     console.log(cartCount);
@@ -104,10 +113,19 @@ const Cart: FC = () => {
                     <hr />
                     <Title level={4}>Payment for amount रु. xxxx</Title>
 
-                    <Text type="secondary">Payment on delivery with </Text>
+                    <Text type="secondary">Payment with </Text>
                     <br />
-                    <Tag color="#108ee9" className="Tag">Cash</Tag>
+                    <Tag color="#108ee9" className="Tag">Cash on delivery</Tag>
                     <Tag color="#87d068" className="Tag">E-Sewa</Tag>
+                    {/* {tagsFromServer.map(tag => (
+                        <CheckableTag
+                            key={tag}
+                            checked={selectedtag.indexOf(tag) > -1}
+                            onChange={checked => handleChange(tag, checked)}
+                        >
+                            {tag}
+                        </CheckableTag>
+                    ))} */}
                     <br /><br />
                     <Text type="secondary">Please fill up the following information so that we can call you for your delivery information.</Text>
                     <br />
@@ -172,7 +190,7 @@ const Cart: FC = () => {
                     </Button>
                 </div>
             </div>
-            <div className="footer" style={{ bottom: '0', position: 'fixed' }}>
+            <div className="footer" style={{ bottom: '0', position: 'absolute', marginBottom: '-40px' }}>
                 <Foot />
             </div>
         </div>

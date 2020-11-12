@@ -85,7 +85,7 @@ const Login: FC = () => (
 
 
 
-        <div className="footer" style={{ position: "fixed", bottom: '0' }}>
+        <div className="footer" style={{ position: "absolute", bottom: '0' }}>
             <Foot />
         </div>
 
