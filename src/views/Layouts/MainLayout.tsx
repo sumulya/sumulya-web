@@ -1,28 +1,19 @@
 import React, { FC } from 'react';
+import { Layout } from 'antd';
 
 import Head from '../Partials/Head';
 import Foot from '../Partials/Foot';
-import { Layout } from 'antd';
+import MainRoute from '../../routes';
 
 const MainLayout: FC = (props) => (
     <div className="mainlayout">
-        {/* Head Component  */}
-        {/* < Head /> */}
-
-        {/* <Layout style={{ flex: 1 }}>{props.children}</Layout> */}
-
-        {/* Footer Component */}
-        {/* <Foot /> */}
-
-
         <Layout>
             <Head />
 
-            {props.children}
+            <MainRoute />
 
             <Foot />
         </Layout>
-
     </div>
 );
 

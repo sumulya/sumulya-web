@@ -8,9 +8,8 @@ import MainLayout from "../../Layouts/MainLayout";
 
 const { Content } = Layout;
 
-const Home: FC = () => (
-    <MainLayout>
-
+const Home: FC = () => {
+    return (
         <Content style={{ padding: '0 50px' }}>
             <Layout style={{ padding: '24px 0' }}>
 
@@ -35,9 +34,9 @@ const Home: FC = () => (
 
             </Layout>
         </Content>
-    </MainLayout>
+    )
 
-);
+};
 
 
 export default Home;

@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import Foot from '../../Partials/Foot';
 import Head from '../../Partials/Head';
-import { Typography, Form, Input, Button, Tag } from 'antd';
+import { Typography, Form, Input, Button, Tag, Layout } from 'antd';
 // import CheckableTag from "antd/lib/tag/CheckableTag";
 import { cartProducts } from './../../../Data/products';
 import { Product } from './../../../Interfaces/index';
@@ -10,6 +10,7 @@ import './../../../App.css';
 import MainLayout from '../../Layouts/MainLayout';
 
 const { Text, Title } = Typography;
+const { Content } = Layout;
 
 
 const Cart: FC = () => {
@@ -32,7 +33,7 @@ const Cart: FC = () => {
     }
 
     return (
-        <MainLayout>
+        <Content>
             <div className="cartPage" style={{ padding: '24px 0', marginTop: '50px' }}>
                 <div className="cart" style={{ height: "400px" }}>
                     {cartProducts.map((cartproduct, key) => {
@@ -174,7 +175,7 @@ const Cart: FC = () => {
                     </div>
                 </div>
             </div>
-        </MainLayout>
+        </Content>
     );
 }
 
