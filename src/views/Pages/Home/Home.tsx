@@ -27,6 +27,7 @@ const Home: FC = () => (
                         <Content style={{ margin: "10px 0", backgroundColor: "white", padding: '20px 20px', minHeight: 280 }}>
 
                             {/* All Cards */}
+                            <h3>All Products </h3>
                             <Cards />
                             <div style={{ textAlign: 'center', marginTop: '10px' }}>
                                 <Button>Show More</Button>

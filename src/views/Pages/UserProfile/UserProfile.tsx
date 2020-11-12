@@ -2,7 +2,8 @@ import React, { FC, useState, useEffect } from 'react';
 import { Avatar, Badge, Col, Typography, Space, Row } from 'antd';
 import { UserOutlined } from "@ant-design/icons";
 import './../../../App.css';
-import MainLayout from "../../Layouts/MainLayout"
+import MainLayout from "../../Layouts/MainLayout";
+import Cards from '../Components/Cards';
 
 const { Title, Text } = Typography;
 
@@ -80,8 +81,11 @@ const UserProfile: FC = (props: any) => {
                             <Title level={1}>Hi, I'm {user && user.firstName}</Title>
 
                             <h2>About</h2>
-                        Lives in Kathmandu, Nepal
-                    </div>
+                            <p>Lives in Kathmandu, Nepal</p>
+
+                            <h2>Purchase history</h2>
+                            <Cards />
+                        </div>
                     </Col>
                 </Row>
             </div>
