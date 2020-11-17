@@ -6,6 +6,7 @@ import Cards from '../Components/Cards';
 import Head from '../../Partials/Head';
 import Foot from '../../Partials/Foot';
 import { DownCircleOutlined } from '@ant-design/icons';
+import GroupCards from '../Components/GroupCards';
 
 const { Content } = Layout;
 
@@ -28,9 +29,27 @@ const Home: FC = () => (
                         <Content style={{ margin: "10px 0", backgroundColor: "white", padding: '20px 20px', minHeight: 280 }}>
 
                             {/* All Cards */}
-                            <h3>All Products</h3>
-                            <Cards />
-                            <div style={{ textAlign: 'center', marginTop: '22px' }}>
+                            <div className="group-product">
+                                <h3><b>Daily Essetianls</b></h3>
+                                <a href="/group/1">See All</a>
+                                <GroupCards />
+                            </div>
+                            <div className="group-product">
+                                <h3><b>Organic Products</b></h3>
+                                <a href="/group/2">See All</a>
+                                <GroupCards />
+                            </div>
+                            <div className="group-product">
+                                <h3><b>Featured</b></h3>
+                                <a href="/group/3">See All</a>
+                                <GroupCards />
+                            </div>
+                            <div className="group-product">
+                                <h3><b>Top Products</b></h3>
+                                <a href="/group/4">See All</a>
+                                <GroupCards />
+                            </div>
+                            <div style={{ textAlign: 'center' }}>
                                 <Button style={{ borderRadius: '10px', fontWeight: 'bold' }} icon={<DownCircleOutlined />}>Show More</Button>
                             </div>
                         </Content>
