@@ -142,26 +142,28 @@
 
 .cartPage{
     background-color: whitesmoke;
-    height:600px;
+    height:610px;
 }
 
 .cartProduct{
     float: left;
     width:60% ;
+    height: 100%;
 }
 
 .cartPrice{
     float: left;
     width: 39%;
     background-color: white;
-    height: 600px;
+    height: 515px;
     margin: 5px;
     padding:30px 80px ;
     margin-top: -215px;
+    border-radius: 10px;
 }
 
 .Tag{
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -179,12 +181,14 @@
     height:100px;
     background-color: #fffcd9;
     margin: 5px;
+    margin-left: 10px;
     padding-top: 15px;
+    border-radius: 10px;
 }
 
 .checkoutItemImg{
     float: left;
-    width: 15%;
+    width: 20%;
     height: 70px;
 }
 

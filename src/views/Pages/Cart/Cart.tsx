@@ -2,18 +2,26 @@ import React, { FC, useState } from 'react';
 import Foot from '../../Partials/Foot';
 import Head from '../../Partials/Head';
 import { Typography, Form, Input, Button, Tag, Layout } from 'antd';
-// import CheckableTag from "antd/lib/tag/CheckableTag";
+import CheckableTag from "antd/lib/tag/CheckableTag";
 import { cartProducts } from './../../../Data/products';
 import { Product } from './../../../Interfaces/index';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import './../../../App.css';
-import MainLayout from '../../Layouts/MainLayout';
 
 const { Text, Title } = Typography;
 const { Content } = Layout;
 
+const tagsFromServer = ['Cash on delivery', 'E-Sewa'];
 
 const Cart: FC = () => {
+
+    const [selectedtag, setselectedTag] = useState(['Cash on delivery']);
+
+    const handleChange = (tag: string, checked: boolean) => {
+        const nextSelectedTag = checked ? [tag] : selectedtag.filter(t => t !== tag);
+        setselectedTag(nextSelectedTag);
+
+    }
 
     const [cartCount, setCartCount] = useState({});
     console.log(cartCount);
@@ -34,8 +42,8 @@ const Cart: FC = () => {
 
     return (
         <Content>
-            <div className="cartPage" style={{ padding: '24px 0', marginTop: '50px' }}>
-                <div className="cart" style={{ height: "400px" }}>
+            <div className="cartPage" style={{ margin: '80px 0px 0px 0px' }}>
+                <div className="cart">
                     {cartProducts.map((cartproduct, key) => {
                         return (
                             <div className="cartProduct">
@@ -106,10 +114,18 @@ const Cart: FC = () => {
                         <hr />
                         <Title level={4}>Payment for amount रु. xxxx</Title>
 
-                        <Text type="secondary">Payment on delivery with </Text>
+                        <Text type="secondary">Payment with :</Text>
                         <br />
-                        <Tag color="#108ee9" className="Tag">Cash</Tag>
-                        <Tag color="#87d068" className="Tag">E-Sewa</Tag>
+                        {tagsFromServer.map(tag => (
+                            <CheckableTag
+                                className="paymentMethod"
+                                key={tag}
+                                checked={selectedtag.indexOf(tag) > -1}
+                                onChange={checked => handleChange(tag, checked)}
+                            >
+                                {tag}
+                            </CheckableTag>
+                        ))}
                         <br /><br />
                         <Text type="secondary">Please fill up the following information so that we can call you for your delivery information.</Text>
                         <br />
@@ -162,13 +178,13 @@ const Cart: FC = () => {
                                 //   onChange={handleChange}
                                 />
                                 {/* {errors.email && (
-                    <div className="validation">{errors.email}</div>
-                    )} */}
+                                <div className="validation">{errors.email}</div>
+                                )} */}
                             </Form.Item>
                         </Form>
 
                         <Button className="sumbitButton"
-                            style={{ width: '100%', backgroundColor: '#e85733', color: 'white' }}
+                            style={{ width: '100%', backgroundColor: '#e85733', color: 'white', borderRadius: '10px' }}
                         >
                             <PlusOutlined />PLACE ORDER
                         </Button>
