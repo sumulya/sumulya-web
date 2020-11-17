@@ -22,17 +22,43 @@
     margin-top: -80px;
 }
 
+/* Carousel */
+
 .carousel h3{
-    height: 300px;
+    height: auto;
     color: #fff;
     line-height: 300px;
     text-align: center;
 }
 
+
 .carousel img{
    object-fit: cover;
    height: auto;
+   border-radius: 10px;
 }
+
+/* Second Carousel */
+.bannerCard{
+    height: 230px;
+    margin: 15px 0px;
+    border-radius: 10px;
+}
+
+.bannerCard img{
+    height: 230px;
+    object-fit: cover;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+.bannerCard .center {
+    position: absolute;
+    margin-top:-120px;
+    margin-left: 150px;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    object-fit: contain;
+  }
 
 
 .searchbox{
@@ -40,19 +66,42 @@
     margin-top: -45px;
 }
 
+.group-cards{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 355px;
+    margin-top: 10px;
+}
 
+.group-product a{
+    color: orangered;
+    text-decoration: underline;
+    font-weight: 700;
+    float: right;
+    margin-top: -32px;
+}
+
+/* Cards */
 .card{
     display: inline-flex;
     margin-left: 20px;
-    height:300px;
+    height:310px;
+    border:2px solid rgb(224, 224, 224) ;
+    border-radius: 8px;
 }
 
 .card img{
-    height:100px;
+    height:130px;
 }
 
 .metacard{
     margin-top: 10px;
+}
+
+.group-product{
+    margin-bottom: 25px;
 }
 
 .checkout{
