@@ -1,10 +1,8 @@
 import React, { FC, useState } from 'react';
-import Foot from '../../Partials/Foot';
-import Head from '../../Partials/Head';
-import { Typography, Form, Input, Button, Tag, Layout } from 'antd';
+import { Typography, Form, Input, Button, Layout } from 'antd';
 import CheckableTag from "antd/lib/tag/CheckableTag";
-import { cartProducts } from './../../../Data/products';
-import { Product } from './../../../Interfaces/index';
+import { cartProducts } from '../../../Data/products';
+import { Product } from '../../../Interfaces/index';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import './../../../App.css';
 

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import './../../../App.css';
 import { ArrowRightOutlined } from '@ant-design/icons';
-import { Carousel, Row, Col, Card, Tag, Button, Typography } from 'antd';
+import { Carousel, Row, Col, Card, Tag, Button } from 'antd';
 
 const Banner: FC = () => {
     return (

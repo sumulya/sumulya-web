@@ -3,6 +3,7 @@
 .header{
     background-color: white;
     width: 100%;
+    box-shadow: rgba(41, 41, 41, 0.06) 0px 2px 4px;
 }
 
 .footer{
@@ -10,7 +11,6 @@
     width: 100%;
     text-align: center;
 }
-
 
 .logo img {
     height: 55px; 
@@ -116,6 +116,7 @@
     left: 13px;
     width: 87%;
     z-index: 11;
+    border-radius: 10px;
 }
 
 .totalCartPrice{
@@ -215,6 +216,7 @@
     padding:"12px";
     line-height: 20px;
     font-family: serif;
+    border-radius: 10px;
 }
 
 .facebook{

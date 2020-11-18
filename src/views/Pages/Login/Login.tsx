@@ -29,6 +29,7 @@ const Login: FC = () => {
                             ]}
                         >
                             <Input
+                                style={{ borderRadius: '8px' }}
                                 name="email"
                                 placeholder="Email"
                             // onChange={handleChange}
@@ -44,6 +45,7 @@ const Login: FC = () => {
                             hasFeedback
                         >
                             <Input.Password
+                                style={{ borderRadius: '8px' }}
                                 name="password"
                                 placeholder="Password"
                             // onChange={handleChange}
@@ -70,7 +72,7 @@ const Login: FC = () => {
                                     </Link>
                                 </div>
                             </div>
-                            <div style={{ display: "flex", justifyContent: "center" }}>OR</div>
+                            <div style={{ display: "flex", justifyContent: "center" }}><b>OR</b></div>
                         </Form.Item>
                     </Form>
                     <div className="facebookLogin">

@@ -1,8 +1,9 @@
 import Home from '../views/Pages/Home/Home';
 import Login from '../views/Pages/Login/Login';
 import Register from '../views/Pages/Register/Register';
-import Cart from '../views/Pages/Cart/Cart';
+import Checkout from '../views/Pages/Checkout/Checkout';
 import CategoryProduct from '../views/Pages/Category/CategoryProduct';
+import GroupProduct from '../views/Pages/Group/GroupProduct';
 
 export default [
     {
@@ -24,15 +25,21 @@ export default [
         exact: true
     },
     {
-        path: "/cart",
-        name: "cart",
-        component: Cart,
+        path: "/checkout",
+        name: "checkout",
+        component: Checkout,
         exact: true
     },
     {
-        path: "/category-product",
-        name: "category-product",
+        path: "/category/:id",
+        name: "category",
         component: CategoryProduct,
+        exact: true
+    },
+    {
+        path: "/group/:id",
+        name: "group",
+        component: GroupProduct,
         exact: true
     },
 ]

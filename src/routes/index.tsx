@@ -6,7 +6,7 @@ const MainRoute = () => {
     return (
         <Switch>
             {
-                routeList.map((route: any, key: any) => 
+                routeList.map((route: any, key: any) =>
                     <Route
                         path={`${route.path}`}
                         name={route.name}

@@ -27,6 +27,7 @@ const Login: FC = () => {
                             ]}
                         >
                             <Input
+                                style={{ borderRadius: '8px' }}
                                 placeholder="Full Name"
                                 name="firstName"
                             //   onChange={handleChange}
@@ -43,6 +44,7 @@ const Login: FC = () => {
                             ]}
                         >
                             <Input
+                                style={{ borderRadius: '8px' }}
                                 placeholder="Phone"
                                 name="phone"
                             //   onChange={handleChange}
@@ -60,6 +62,7 @@ const Login: FC = () => {
                             ]}
                         >
                             <Input
+                                style={{ borderRadius: '8px' }}
                                 placeholder="Email"
                                 name="email"
                             //   onChange={handleChange}
@@ -78,6 +81,7 @@ const Login: FC = () => {
                             hasFeedback
                         >
                             <Input.Password
+                                style={{ borderRadius: '8px' }}
                                 placeholder="Password"
                                 name="password"
                             //   onChange={handleChange}
@@ -104,6 +108,7 @@ const Login: FC = () => {
                             ]}
                         >
                             <Input.Password
+                                style={{ borderRadius: '8px' }}
                                 placeholder="Confirm Password"
                                 name="confirmPassword"
                             //   onChange={handleChange}
@@ -124,8 +129,13 @@ const Login: FC = () => {
                                 >
                                     Register
                                 </Button>
+                                <div style={{ display: "flex", justifyContent: 'center' }}>
+                                    <Link to="/login">
+                                        <strong>Back To Login</strong>
+                                    </Link>
+                                </div>
                             </div>
-                            <div style={{ display: "flex", justifyContent: "center" }}>OR</div>
+                            <div style={{ display: "flex", justifyContent: "center" }}><b>OR</b></div>
                         </Form.Item>
                     </Form>
                     <div className="facebookLogin">
@@ -138,7 +148,7 @@ const Login: FC = () => {
             </div>
         </Content>
 
-        
+
     )
 };
 

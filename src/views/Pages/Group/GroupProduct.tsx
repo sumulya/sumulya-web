@@ -6,7 +6,7 @@ import { DownCircleOutlined } from '@ant-design/icons';
 
 const { Content } = Layout;
 
-const CategoryProduct: FC = () => (
+const GroupProduct: FC = () => (
     <div className="home">
         <Layout>
 
@@ -21,7 +21,7 @@ const CategoryProduct: FC = () => (
                         <Content style={{ margin: "10px 0", backgroundColor: "white", padding: '20px 20px', minHeight: 280, borderRadius: '10px' }}>
 
                             {/* All Cards */}
-                            <h3>Category Product</h3>
+                            <h3>Group Product</h3>
                             <Cards />
                             <div style={{ textAlign: 'center', marginTop: '10px' }}>
                                 <Button icon={<DownCircleOutlined />}>Show More</Button>
@@ -39,4 +39,4 @@ const CategoryProduct: FC = () => (
 );
 
 
-export default CategoryProduct;
+export default GroupProduct;

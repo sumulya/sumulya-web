@@ -20,8 +20,9 @@ const GroupCards: FC = () => {
 
         let newItem = products[index];
         setCartItem(newItem);
+
     }
-    
+
     const handleSubtract = (product: Product) => {
         const index = products.indexOf(product);
         products[index] = { ...product };
@@ -29,6 +30,9 @@ const GroupCards: FC = () => {
         setCartCount({ products });
 
     }
+
+    console.log(cartCount);
+    console.log(cartItem)
 
 
 

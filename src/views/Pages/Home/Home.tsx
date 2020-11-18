@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { Button, Layout } from 'antd';
 import Side from '../../Partials/Side';
 import Banner from '../Components/Banner';
-import Cards from '../Components/Cards';
 import { DownCircleOutlined } from '@ant-design/icons';
 import GroupCards from '../Components/GroupCards';
 
@@ -21,7 +20,7 @@ const Home: FC = () => {
                     {/* Carousel*/}
                     <Banner />
 
-                    <Content style={{ margin: "10px 0", backgroundColor: "white", padding: '20px 20px', minHeight: 280 }}>
+                    <Content style={{ margin: "10px 0", backgroundColor: "white", padding: '20px 20px', minHeight: 280, borderRadius: '10px' }}>
 
                         {/* All Cards */}
                         <div className="group-product">
