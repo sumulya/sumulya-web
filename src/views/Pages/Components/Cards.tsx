@@ -43,33 +43,32 @@ const Cards: FC = () => {
                 return (
                     <div className="card" key={product.id}>
                         <Card
-                            title={
-                                (product.count > 0) ? (
-                                    <div className="cardFunc">
-                                        <MinusOutlined
-                                            onClick={() => handleSubtract(product)}
-                                            style={{ marginRight: '20px' }}
-                                        />
-                                        {product.count}
-                                        <PlusOutlined
-                                            onClick={() => handleAdd(product)}
-                                            style={{ marginLeft: '20px' }}
-                                        />
-                                    </div>
-                                ) : (<div></div>)
-                            }
-
-                            extra={
-                                (product.count === 0) ? (
-                                    <ShoppingOutlined style={{ fontSize: "15px" }}
-                                        onClick={() => handleAdd(product)}
-                                    />
-                                ) : (<div></div>)
-                            }
                             hoverable
+                            bordered={false}
                             style={{ width: 200 }}
-                            cover={<img alt="example" src={product.imgsrc} />}
                         >
+                            <div className="cardTop">
+                                {
+                                    (product.count > 0) ? (
+                                        <div className="cardFunc">
+                                            <MinusOutlined
+                                                onClick={() => handleSubtract(product)}
+                                                style={{ marginRight: '20px' }}
+                                            />
+                                            {product.count}
+                                            <PlusOutlined
+                                                onClick={() => handleAdd(product)}
+                                                style={{ marginLeft: '20px' }}
+                                            />
+                                        </div>
+                                    ) : (<div className="addtocart"><ShoppingOutlined style={{ fontSize: "15px" }}
+                                        onClick={() => handleAdd(product)}
+                                    /></div>)
+                                }
+                            </div>
+                            <div className="cardImg">
+                                <img alt="example" src={product.imgsrc} />
+                            </div>
                             <Meta className="metacard" title={product.price} description={product.name} />
                         </Card>
                     </div>

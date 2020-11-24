@@ -33,7 +33,7 @@ const Side: FC = () => (
                 <Menu.Item key="9"><Link to="/category/9">-Skin Care</Link></Menu.Item>
             </SubMenu>
             <SubMenu key="sub3" icon={<ShopOutlined />} style={{ fontWeight: "bold" }} title="Household Items">
-                <Menu.Item key="10"><Link to="/category/10">Cleaners</Link></Menu.Item>
+                <Menu.Item key="10"><Link to="/category/10">-Cleaners</Link></Menu.Item>
                 <Menu.Item key="11"><Link to="/category/11">-Cleaning Tools</Link></Menu.Item>
                 <Menu.Item key="12"><Link to="/category/12">-DishWasher</Link></Menu.Item>
                 <Menu.Item key="13"><Link to="/category/13">-Fresheners</Link></Menu.Item>
