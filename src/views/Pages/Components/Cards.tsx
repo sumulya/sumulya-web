@@ -44,8 +44,7 @@ const Cards: FC = () => {
                     <div className="card" key={product.id}>
                         <Card
                             hoverable
-                            bordered={false}
-                            style={{ width: 200 }}
+                            style={{ width: 200, borderRadius: '10px' }}
                         >
                             <div className="cardTop">
                                 {

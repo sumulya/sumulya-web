@@ -75,12 +75,17 @@
     margin-top: 10px;
 }
 
+
+
 .group-product a{
     color: orangered;
-    text-decoration: underline;
     font-weight: 700;
     float: right;
     margin-top: -32px;
+}
+
+.group-product a:hover{
+    color: rgb(255, 112, 60);
 }
 
 .group-product h3{
@@ -92,11 +97,12 @@
     margin-left: 20px;
     height:310px;
     border:2px solid rgb(220, 220, 220) ;
-    border-radius: 10px;
+    border-radius: 15px;
+    margin-bottom: 25px;
 }
 
 .card img{
-    height:130px;
+    height:140px;
 }
 
 .metacard{
@@ -314,6 +320,10 @@ img{
 
 .addtocart{
     text-align: right;
+}
+
+.cardImg{
+    margin-top: 5px;
 }
 
 

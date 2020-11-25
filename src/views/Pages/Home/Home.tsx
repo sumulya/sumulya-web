@@ -25,22 +25,22 @@ const Home: FC = () => {
                         {/* All Cards */}
                         <div className="group-product">
                             <h3><b>Featured</b></h3>
-                            <a href="/group/1">See All</a>
+                            <a href="/group/1">SEE ALL</a>
                             <GroupCards />
                         </div>
                         <div className="group-product">
                             <h3><b>Daily Essetianls</b></h3>
-                            <a href="/group/2">See All</a>
+                            <a href="/group/2">SEE ALL</a>
                             <GroupCards />
                         </div>
                         <div className="group-product">
                             <h3><b>Organic Products</b></h3>
-                            <a href="/group/3">See All</a>
+                            <a href="/group/3">SEE ALL</a>
                             <GroupCards />
                         </div>
                         <div className="group-product">
                             <h3><b>Top Products</b></h3>
-                            <a href="/group/4">See All</a>
+                            <a href="/group/4">SEE ALL</a>
                             <GroupCards />
                         </div>
                         <div style={{ textAlign: 'center', marginTop: '15px' }}>
