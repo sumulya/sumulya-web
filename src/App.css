@@ -23,7 +23,7 @@
 }
 
 .carousel h3{
-    height: 300px;
+    height: auto;
     color: #fff;
     line-height: 300px;
     text-align: center;
@@ -38,17 +38,23 @@
 .searchbox{
     margin-left: 290px;
     margin-top: -45px;
+    width: 57%;
 }
 
+.search{
+    width: 100%;
+}
 
 .card{
     display: inline-flex;
     margin-left: 20px;
-    height:300px;
+    height:310px;
+    border:2px solid rgb(224, 224, 224) ;
+    border-radius: 8px;
 }
 
 .card img{
-    height:100px;
+    height:130px;
 }
 
 .metacard{
@@ -60,13 +66,13 @@
     justify-content: center;
     padding: 5px;
     margin: 10px;
+    border-radius: 10px;
     background: #e85733;
     color: #fff !important;
     position: absolute;
     bottom: 80px;
     left: 13px;
     width: 87%;
-    z-index: 11;
 }
 
 .totalCartPrice{
@@ -83,12 +89,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin:60px 0px;
+    margin:15vh 0;
 }
 
 .login{
     background: linear-gradient(90deg, #f9ab7b91 13%, #efe09b 50%, #cad89c 90%);
-    height:600px;
+    height:100vh;
 }
 
 .cartPage{
@@ -112,7 +118,7 @@
 }
 
 .Tag{
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -162,6 +168,14 @@
     padding:"12px";
     line-height: 20px;
     font-family: serif;
+}
+
+.emailForm input{
+    border-radius: 10px;
+}
+
+.emailForm button{
+    border-radius: 10px;
 }
 
 .facebook{
@@ -227,7 +241,7 @@
     color: white;
     border-radius: 8px;
     height: 30px;
-    margin-top:-10px ;
+    margin-top:-8px ;
 }
 
 img{

@@ -171,7 +171,6 @@ const Cart: FC = () => {
                         >
                             <PlusOutlined />PLACE ORDER
                         </Button>
-                    </div>
                 </div>
             </div>
         </MainLayout>
