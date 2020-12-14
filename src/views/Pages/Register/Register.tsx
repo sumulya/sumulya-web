@@ -71,6 +71,7 @@ const Login: FC = () => (
                     hasFeedback
                 >
                     <Input.Password
+                        style={{ borderRadius: '10px' }}
                         placeholder="Password"
                         name="password"
                     //   onChange={handleChange}
@@ -97,6 +98,7 @@ const Login: FC = () => (
                     ]}
                 >
                     <Input.Password
+                        style={{ borderRadius: '10px' }}
                         placeholder="Confirm Password"
                         name="confirmPassword"
                     //   onChange={handleChange}
