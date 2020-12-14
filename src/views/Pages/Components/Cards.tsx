@@ -33,7 +33,7 @@ const Cards: FC = () => {
         setCartCount({ products });
 
     }
-    console.log(cartItem);
+
 
 
     return (

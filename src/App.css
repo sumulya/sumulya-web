@@ -11,6 +11,7 @@
     text-align: center;
 }
 
+
 .logo img {
     height: 55px;
     margin-left: -525px;
@@ -28,6 +29,7 @@
     text-align: center;
     background: #364d79 ;
 }
+
 
 .searchbox{
     margin-left: 290px;
@@ -63,6 +65,16 @@
     z-index: 11;
 }
 
+.totalCartPrice{
+    margin:-26px 0px 5px -24px;
+    top:0px;
+    left:0px;
+    background-color: wheat;
+    padding-top: 10px;
+    width: 115%;
+    height: 50px;
+}
+
 .emailForm{
     display: flex;
     align-items: center;
@@ -79,7 +91,6 @@
     background-color: whitesmoke;
     height:600px;
 }
-
 .cartProduct{
     float: left;
     width:60% ;
@@ -88,11 +99,23 @@
 .cartPrice{
     float: left;
     width: 39%;
-    text-align: center;
     background-color: white;
     height: 600px;
     margin: 5px;
+    padding:30px 80px ;
+    margin-top: -215px;
 }
+
+.Tag{
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.paymentInput{
+    width: 120%;
+    height: 35px;
+}
+
 
 .loginBtn{
     border-radius: 8px;
@@ -108,7 +131,9 @@
 .checkoutItemImg{
     float: left;
     width: 15%;
+    height: 70px;
 }
+
 
 .checkoutItemName{
     float: left;
@@ -118,6 +143,10 @@
 .checkoutItemCounter{
     float: right;
     margin-right: 5%;
+}
+
+.totalAmount{
+    font-size: 15px;
 }
 
 .socialButton{
