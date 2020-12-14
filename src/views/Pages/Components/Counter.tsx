@@ -16,6 +16,8 @@ const Counter: FC<Product> = (props: Product) => {
 
     useEffect(() => { }, []);
 
+
+
     const handleAdd = (product: Product) => {
         const index = products.indexOf(product);
         products[index] = { ...product };
@@ -34,8 +36,8 @@ const Counter: FC<Product> = (props: Product) => {
 
     }
 
-
     return (
+
         <div className="cardFunc">
             <MinusOutlined
                 onClick={() => handleSubtract(props)}
@@ -47,6 +49,7 @@ const Counter: FC<Product> = (props: Product) => {
                 style={{ marginLeft: '20px' }}
             />
         </div>
+
     );
 }
 

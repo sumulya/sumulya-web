@@ -32,13 +32,11 @@ const Cards: FC = () => {
         setCartCount({ products });
 
     }
-    console.log(cartItem);
+
 
 
     return (
         <div className="allcards">
-            <h3>All Products </h3>
-
             {products.map((product, key) => {
                 return (
                     <div className="card" key={product.id}>

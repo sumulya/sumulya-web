@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import './../../App.css';
 import { Menu, Layout } from 'antd';
 import { Link } from 'react-router-dom';
-import { NotificationOutlined, AppleFilled, UserOutlined, ShoppingOutlined, CoffeeOutlined, ClearOutlined, MedicineBoxOutlined } from '@ant-design/icons';
+import { NotificationOutlined, FireOutlined, AppleFilled, UserOutlined, ShopOutlined, CoffeeOutlined, ClearOutlined, MedicineBoxOutlined, FunnelPlotOutlined, HeartFilled } from '@ant-design/icons';
 const { SubMenu } = Menu;
 const { Sider } = Layout;
 
@@ -20,71 +20,71 @@ const Side: FC = () => (
                 <Menu.Item key="3"><Link to="/category/3">-Gundruk &amp; Sinki</Link></Menu.Item>
             </SubMenu>
             <SubMenu key="sub2" icon={<UserOutlined />} style={{ fontWeight: "bold" }} title="Personal Care">
-                <Menu.Item key="4">-Hygiene</Menu.Item>
-                <Menu.Item key="5">-Bath &amp; Body</Menu.Item>
-                <Menu.Item key="6">-Face Care</Menu.Item>
-                <Menu.Item key="7">-Cosmetics</Menu.Item>
-                <Menu.Item key="8">-Hair Care</Menu.Item>
-                <Menu.Item key="9">-Skin Care</Menu.Item>
+                <Menu.Item key="4"><Link to="/category/4">-Hygiene</Link></Menu.Item>
+                <Menu.Item key="5"><Link to="/category/5">-Bath &amp; Body</Link></Menu.Item>
+                <Menu.Item key="6"><Link to="/category/6">-Face Care</Link></Menu.Item>
+                <Menu.Item key="7"><Link to="/category/7">-Cosmetics</Link></Menu.Item>
+                <Menu.Item key="8"><Link to="/category/8">-Hair Care</Link></Menu.Item>
+                <Menu.Item key="9"><Link to="/category/9">-Skin Care</Link></Menu.Item>
             </SubMenu>
-            <SubMenu key="sub3" icon={<ShoppingOutlined />} style={{ fontWeight: "bold" }} title="Household Items">
-                <Menu.Item key="10">Cleaners</Menu.Item>
-                <Menu.Item key="11">-Cleaning Tools</Menu.Item>
-                <Menu.Item key="12">-DishWasher</Menu.Item>
-                <Menu.Item key="13">-Fresheners</Menu.Item>
-                <Menu.Item key="14">-Laundry</Menu.Item>
-                <Menu.Item key="15">-Shoe Care</Menu.Item>
-                <Menu.Item key="16">-Gas</Menu.Item>
+            <SubMenu key="sub3" icon={<ShopOutlined />} style={{ fontWeight: "bold" }} title="Household Items">
+                <Menu.Item key="10"><Link to="/category/10">Cleaners</Link></Menu.Item>
+                <Menu.Item key="11"><Link to="/category/11">-Cleaning Tools</Link></Menu.Item>
+                <Menu.Item key="12"><Link to="/category/12">-DishWasher</Link></Menu.Item>
+                <Menu.Item key="13"><Link to="/category/13">-Fresheners</Link></Menu.Item>
+                <Menu.Item key="14"><Link to="/category/14">-Laundry</Link></Menu.Item>
+                <Menu.Item key="15"><Link to="/category/15">-Shoe Care</Link></Menu.Item>
+                <Menu.Item key="16"><Link to="/category/16">-Gas</Link></Menu.Item>
             </SubMenu>
-            <SubMenu key="sub4" icon={<NotificationOutlined />} style={{ fontWeight: "bold" }} title="Biscuits Snacks &amp; Chocolates">
-                <Menu.Item key="17">-Biscuits &amp; cookies</Menu.Item>
-                <Menu.Item key="18">-Chips &amp; Crispies</Menu.Item>
-                <Menu.Item key="19">-Namkeens &amp; Snacks</Menu.Item>
-                <Menu.Item key="20">-Chocolates &amp; Candies</Menu.Item>
-                <Menu.Item key="21">-Sweets</Menu.Item>
-                <Menu.Item key="22">-Noodles</Menu.Item>
+            <SubMenu key="sub4" icon={<FireOutlined />} style={{ fontWeight: "bold" }} title="Biscuits Snacks &amp; Chocolates">
+                <Menu.Item key="17"><Link to="/category/17">-Biscuits &amp; cookies</Link></Menu.Item>
+                <Menu.Item key="18"><Link to="/category/18">-Chips &amp; Crispies</Link></Menu.Item>
+                <Menu.Item key="19"><Link to="/category/19">-Namkeens &amp; Snacks</Link></Menu.Item>
+                <Menu.Item key="20"><Link to="/category/20">-Chocolates &amp; Candies</Link></Menu.Item>
+                <Menu.Item key="21"><Link to="/category/21">-Sweets</Link></Menu.Item>
+                <Menu.Item key="22"><Link to="/category/22">-Noodles</Link></Menu.Item>
             </SubMenu>
             <SubMenu key="sub5" icon={<CoffeeOutlined />} style={{ fontWeight: "bold" }} title="Beverages">
-                <Menu.Item key="23">-Juices &amp; Drinks</Menu.Item>
-                <Menu.Item key="24">-Health &amp; Energy Drinks</Menu.Item>
-                <Menu.Item key="25">-Tea &amp; Coffee</Menu.Item>
-                <Menu.Item key="26">-Milk Drinks</Menu.Item>
-                <Menu.Item key="27">-Water &amp; Soda</Menu.Item>
-                <Menu.Item key="28">-Alcohol &amp; Tobaccos</Menu.Item>
-                <Menu.Item key="29">-Cold Drinks</Menu.Item>
+                <Menu.Item key="23"><Link to="/category/23">-Juices &amp; Drinks</Link></Menu.Item>
+                <Menu.Item key="24"><Link to="/category/24">-Health &amp; Energy Drinks</Link></Menu.Item>
+                <Menu.Item key="25"><Link to="/category/25">-Tea &amp; Coffee</Link></Menu.Item>
+                <Menu.Item key="26"><Link to="/category/26">-Milk Drinks</Link></Menu.Item>
+                <Menu.Item key="27"><Link to="/category/27">-Water &amp; Soda</Link></Menu.Item>
+                <Menu.Item key="28"><Link to="/category/28">-Alcohol &amp; Tobaccos</Link></Menu.Item>
+                <Menu.Item key="29"><Link to="/category/29">-Cold Drinks</Link></Menu.Item>
             </SubMenu>
             <SubMenu key="sub6" icon={<MedicineBoxOutlined />} style={{ fontWeight: "bold" }} title="Baby &amp; Care">
-                <Menu.Item key="30">-Baby Accessories</Menu.Item>
-                <Menu.Item key="31">-Diper &amp; Wipes</Menu.Item>
-                <Menu.Item key="32">-Baby Food</Menu.Item>
-                <Menu.Item key="33">-Baby Skin &amp; Hair Care</Menu.Item>
+                <Menu.Item key="30"><Link to="/category/30">-Baby Accessories</Link></Menu.Item>
+                <Menu.Item key="31"><Link to="/category/31">-Diper &amp; Wipes</Link></Menu.Item>
+                <Menu.Item key="32"><Link to="/category/32">-Baby Food</Link></Menu.Item>
+                <Menu.Item key="33"><Link to="/category/33">-Baby Skin &amp; Hair Care</Link></Menu.Item>
             </SubMenu>
-            <SubMenu key="sub7" icon={<NotificationOutlined />} style={{ fontWeight: "bold" }} title="BreakFast &amp; Dairy">
-                <Menu.Item key="34">-Bread &amp; Egg</Menu.Item>
-                <Menu.Item key="35">-Milk &amp; Milk Products</Menu.Item>
-                <Menu.Item key="36">-Butter,Cheese &amp; Paneer</Menu.Item>
-                <Menu.Item key="37">-Cereal &amp; Mixes</Menu.Item>
+            <SubMenu key="sub7" icon={<FunnelPlotOutlined />} style={{ fontWeight: "bold" }} title="BreakFast &amp; Dairy">
+                <Menu.Item key="34"><Link to="/category/34">-Bread &amp; Egg</Link></Menu.Item>
+                <Menu.Item key="35"><Link to="/category/35">-Milk &amp; Milk Products</Link></Menu.Item>
+                <Menu.Item key="36"><Link to="/category/36">-Butter,Cheese &amp; Paneer</Link></Menu.Item>
+                <Menu.Item key="37"><Link to="/category/37">-Cereal &amp; Mixes</Link></Menu.Item>
             </SubMenu>
-            <SubMenu key="sub8" icon={<NotificationOutlined />} style={{ fontWeight: "bold" }} title="Health Foods">
-                <Menu.Item key="38">-Chyawanprash</Menu.Item>
+            <SubMenu key="sub8" icon={<HeartFilled />} style={{ fontWeight: "bold" }} title="Health Foods">
+                <Menu.Item key="38"><Link to="/category/38">-Chyawanprash</Link></Menu.Item>
             </SubMenu>
             <SubMenu key="sub9" icon={<ClearOutlined />} style={{ fontWeight: "bold" }} title="Grocery &amp; Staples">
-                <Menu.Item key="39">-Pulses</Menu.Item>
-                <Menu.Item key="40">-Atta &amp; Flours</Menu.Item>
-                <Menu.Item key="41">-Rice &amp; Rice Products</Menu.Item>
-                <Menu.Item key="42">-Spices &amp; Masalas</Menu.Item>
-                <Menu.Item key="43">-Cooking Oil</Menu.Item>
-                <Menu.Item key="44">-Dry Fruits &amp; Nuts</Menu.Item>
-                <Menu.Item key="45">-Ghee</Menu.Item>
-                <Menu.Item key="46">-Salt &amp; Sugar</Menu.Item>
+                <Menu.Item key="39"><Link to="/category/39">-Pulses</Link></Menu.Item>
+                <Menu.Item key="40"><Link to="/category/40">-Atta &amp; Flours</Link></Menu.Item>
+                <Menu.Item key="41"><Link to="/category/41">-Rice &amp; Rice Products</Link></Menu.Item>
+                <Menu.Item key="42"><Link to="/category/42">-Spices &amp; Masalas</Link></Menu.Item>
+                <Menu.Item key="43"><Link to="/category/43">-Cooking Oil</Link></Menu.Item>
+                <Menu.Item key="44"><Link to="/category/44">-Dry Fruits &amp; Nuts</Link></Menu.Item>
+                <Menu.Item key="45"><Link to="/category/45">-Ghee</Link></Menu.Item>
+                <Menu.Item key="46"><Link to="/category/46">-Salt &amp; Sugar</Link></Menu.Item>
             </SubMenu>
             <SubMenu key="sub10" icon={<NotificationOutlined />} style={{ fontWeight: "bold" }} title="Jams, Honey, Spreads &amp; Sauces">
-                <Menu.Item key="47">-Honey</Menu.Item>
-                <Menu.Item key="48">-Jams</Menu.Item>
-                <Menu.Item key="49">-Pasta &ammp; Soup</Menu.Item>
-                <Menu.Item key="50">-Pickles</Menu.Item>
-                <Menu.Item key="51">-Sauces</Menu.Item>
-                <Menu.Item key="51">-Spreads</Menu.Item>
+                <Menu.Item key="47"><Link to="/category/47">-Honey</Link></Menu.Item>
+                <Menu.Item key="48"><Link to="/category/48">-Jams</Link></Menu.Item>
+                <Menu.Item key="49"><Link to="/category/49">-Pasta &ammp; Soup</Link></Menu.Item>
+                <Menu.Item key="50"><Link to="/category/50">-Pickles</Link></Menu.Item>
+                <Menu.Item key="51"><Link to="/category/51">-Sauces</Link></Menu.Item>
+                <Menu.Item key="52"><Link to="/category/52">-Spreads</Link></Menu.Item>
             </SubMenu>
         </Menu>
     </Sider>

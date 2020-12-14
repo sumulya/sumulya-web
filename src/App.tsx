@@ -5,6 +5,7 @@ import Login from './views/Pages/Login/Login';
 import Register from './views/Pages/Register/Register';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Cart from './views/Pages/Cart/Cart';
+import CategoryProduct from './views/Pages/Category/CategoryProduct';
 
 const App: FC = () => (
   <div className="App">
@@ -21,9 +22,9 @@ const App: FC = () => (
       <Switch>
         <Route path="/cart" exact component={Cart} />
       </Switch>
-      {/* <Switch>
-        <Route path="/category/:id" exact component={Category} />
-      </Switch> */}
+      <Switch>
+        <Route path="/category/:id" exact component={CategoryProduct} />
+      </Switch>
     </Router>
 
   </div>

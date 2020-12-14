@@ -29,6 +29,9 @@ const Login: FC = () => (
                 <Form.Item
                     style={{ marginBottom: "5px" }}
                     rules={[
+                        {
+                            type: 'number', message: 'The input is not valid number',
+                        },
                         { required: true, message: "Please input your phone!" }
                     ]}
                 >

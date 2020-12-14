@@ -84,3 +84,29 @@ export const products = [
         count: 0
     }
 ]
+
+export const cartProducts = [
+    {
+        id: 1,
+        imgsrc: 'https://upload.wikimedia.org/wikipedia/en/f/f9/Twix-Wrapper-Small.jpg',
+        price: 'रु 60',
+        name: 'TWIX BAR',
+        count: 3
+    },
+    {
+        id: 2,
+        imgsrc: 'https://sumulya.s3.ap-south-1.amazonaws.com/media/products/202007-0911-0519-organic-cashew-500x500.png',
+        price: 'रु 1600',
+        name: 'HAND PICKED CASHEW',
+        count: 1
+    },
+    {
+        id: 3,
+        imgsrc: 'https://sumulya.s3.ap-south-1.amazonaws.com/media/products/202007-0510-3953-hypercity-every-day-sugar-loose-v-1-kg.png',
+        price: 'रु 90',
+        name: 'SUGAR A GRADE (1 KG)',
+        count: 2
+    },
+
+
+]
