@@ -1,20 +1,22 @@
 import React, { FC } from 'react';
+import { Layout } from 'antd';
 
 import Head from '../Partials/Head';
 import Foot from '../Partials/Foot';
-import { Layout } from 'antd';
+import MainRoute from '../../routes';
 
-const MainLayout: FC = (props) => {
-    return (
-        <div className="mainlayout">
-            {/* Head Component  */}
+const MainLayout: FC = (props) => (
+    <div className="mainlayout">
+        <Layout>
             <Head />
 
-            <Layout style={{ flex: 1 }}>{props.children}</Layout>
+            <MainRoute />
 
             {/* Footer Component */}
             <Foot />
-        </div>
-    )
-};
+        </Layout>
+    </div>
+);
+
+
 export default MainLayout;

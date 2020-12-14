@@ -99,7 +99,7 @@ const Head: FC = () => {
                                     </div>
                                 );
                             })}
-                            <Link to="/cart">
+                            <Link to="/checkout">
                                 <div className="checkout">
                                     Proceed To Checkout <ArrowRightOutlined style={{ margin: '5px 10px' }} />
                                 </div></Link>

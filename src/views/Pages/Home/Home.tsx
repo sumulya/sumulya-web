@@ -2,16 +2,13 @@ import React, { FC } from 'react';
 import { Button, Layout } from 'antd';
 import Side from '../../Partials/Side';
 import Banner from '../Components/Banner';
-import Cards from '../Components/Cards';
 import { DownCircleOutlined } from '@ant-design/icons';
 import GroupCards from '../Components/GroupCards';
-import MainLayout from "../../Layouts/MainLayout";
 
 const { Content } = Layout;
 
-const Home: FC = () => (
-    <MainLayout>
-
+const Home: FC = () => {
+    return (
         <Content style={{ padding: '0 50px' }}>
             <Layout style={{ padding: '24px 0' }}>
 
@@ -23,41 +20,40 @@ const Home: FC = () => (
                     {/* Carousel*/}
                     <Banner />
 
-                    <Content style={{ margin: "10px 0", backgroundColor: "white", padding: '20px 20px', minHeight: 280 }}>
-                            {/* All Cards */}
-                            <div className="group-product">
-                                <h3><b>Daily Essetianls</b></h3>
-                                <a href="/group/1">See All</a>
-                                <GroupCards />
-                            </div>
-                            <div className="group-product">
-                                <h3><b>Organic Products</b></h3>
-                                <a href="/group/2">See All</a>
-                                <GroupCards />
-                            </div>
-                            <div className="group-product">
-                                <h3><b>Featured</b></h3>
-                                <a href="/group/3">See All</a>
-                                <GroupCards />
-                            </div>
-                            <div className="group-product">
-                                <h3><b>Top Products</b></h3>
-                                <a href="/group/4">See All</a>
-                                <GroupCards />
-                            </div>
-                            <div style={{ textAlign: 'center' }}>
-                            <h3>All Products </h3>
-                            <Cards />
-                                <Button style={{ borderRadius: '10px', fontWeight: 'bold' }} icon={<DownCircleOutlined />}>Show More</Button>
-                            </div>
+                    <Content style={{ margin: "10px 0", backgroundColor: "white", padding: '20px 20px', minHeight: 280, borderRadius: '10px' }}>
+
+                        {/* All Cards */}
+                        <div className="group-product">
+                            <h3><b>Featured</b></h3>
+                            <a href="/group/1">SEE ALL</a>
+                            <GroupCards />
+                        </div>
+                        <div className="group-product">
+                            <h3><b>Daily Essetianls</b></h3>
+                            <a href="/group/2">SEE ALL</a>
+                            <GroupCards />
+                        </div>
+                        <div className="group-product">
+                            <h3><b>Organic Products</b></h3>
+                            <a href="/group/3">SEE ALL</a>
+                            <GroupCards />
+                        </div>
+                        <div className="group-product">
+                            <h3><b>Top Products</b></h3>
+                            <a href="/group/4">SEE ALL</a>
+                            <GroupCards />
+                        </div>
+                        <div style={{ textAlign: 'center', marginTop: '15px' }}>
+                            <Button icon={<DownCircleOutlined />}>Show More</Button>
+                        </div>
                     </Content>
                 </Content>
 
             </Layout>
         </Content>
-    </MainLayout>
+    )
 
-);
+};
 
 
 export default Home;

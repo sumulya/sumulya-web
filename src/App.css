@@ -3,6 +3,13 @@
 .header{
     background-color: white;
     width: 100%;
+    box-shadow: rgba(41, 41, 41, 0.06) 0px 2px 4px;
+}
+
+.footer{
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
 }
 
 .logo img {
@@ -65,6 +72,22 @@
     object-fit: contain;
   }
 
+
+.bannerCard img{
+    height: 230px;
+    object-fit: cover;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+.bannerCard .center {
+    position: absolute;
+    margin-top:-120px;
+    margin-left: 150px;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    object-fit: contain;
+  }
+
 .badgetag{
     border-radius: 5px;
   }
@@ -91,6 +114,14 @@
     margin-top: -32px;
 }
 
+
+.group-product a:hover{
+    color: rgb(255, 112, 60);
+}
+
+.group-product h3{
+    font-size: 17px;
+}
 /* Cards */
 .card{
     display: inline-flex;
@@ -102,7 +133,11 @@
 
 .card img{
     height:130px;
+    border:2px solid rgb(220, 220, 220) ;
+    border-radius: 15px;
+    margin-bottom: 25px;
 }
+
 
 .metacard{
     margin-top: 10px;
@@ -111,7 +146,14 @@
 .group-product{
     margin-bottom: 25px;
 }
+.badgetag{
+    border-radius: 3px;
+  }
 
+.btnCover{
+    border-radius: 5px;
+    height: 40px;
+}
 .checkout{
     display: flex;
     justify-content: center;
@@ -124,6 +166,8 @@
     bottom: 80px;
     left: 13px;
     width: 87%;
+    z-index: 11;
+    border-radius: 10px;
 }
 
 .totalCartPrice{
@@ -200,6 +244,10 @@
     height: 70px;
 }
 
+.paymentMethod{
+    border-radius: 5px;
+}
+
 
 .checkoutItemName{
     float: left;
@@ -228,6 +276,7 @@
     padding:"12px";
     line-height: 20px;
     font-family: serif;
+    border-radius: 10px;
 }
 
 .emailForm input{
@@ -310,6 +359,7 @@
     border-radius: 8px;
     height: 30px;
     margin-top:-8px ;
+    padding-top: 3px;
 }
 
 img{
@@ -324,7 +374,18 @@ img{
     text-align: center;
     background-color: rgb(238, 238, 238);
 }
+.cardTop{
+    height: 30px;
+    margin-top: -10px;
+}
 
+.addtocart{
+    text-align: right;
+}
+
+.cardImg{
+    margin-top: 5px;
+}
 
 .profileDetails {
     padding: 50px;

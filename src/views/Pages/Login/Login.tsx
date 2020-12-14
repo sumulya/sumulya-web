@@ -1,16 +1,16 @@
 import React, { FC } from 'react';
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button, Layout } from 'antd';
 import { Link } from 'react-router-dom';
 import './../../../App.css';
-import MainLayout from '../../Layouts/MainLayout';
 
+const { Content } = Layout;
 
 const Login: FC = () => {
 
     return (
-        <MainLayout>
+        <Content>
             <div className="login">
-                <div className="authBrandingWrapper" style={{ margin: '70px 0px 0px 0px' }}>
+                <div className="authBrandingWrapper" style={{ margin: '64px 0px 0px 0px' }}>
                     <div className="logoWeapper">
                         <Link to="/">
                             <img alt="logo" src="/images/sum-logo.png" className="logo" />
@@ -29,6 +29,7 @@ const Login: FC = () => {
                             ]}
                         >
                             <Input
+                                style={{ borderRadius: '8px' }}
                                 name="email"
                                 placeholder="Email"
                             // onChange={handleChange}
@@ -44,6 +45,7 @@ const Login: FC = () => {
                             hasFeedback
                         >
                             <Input.Password
+                                style={{ borderRadius: '8px' }}
                                 name="password"
                                 placeholder="Password"
                             // onChange={handleChange}
@@ -62,11 +64,15 @@ const Login: FC = () => {
                                     Login
                                 </Button>
                                 <div style={{ display: "flex", justifyContent: "space-between" }}>
-                                    <strong><a href="#">Register Now!</a></strong>
-                                    <strong><a href="#">Forgot Pasword?</a></strong>
+                                    <Link to="/register">
+                                        <strong>Register Now!</strong>
+                                    </Link>
+                                    <Link to="/">
+                                        <strong>Forgot Pasword?</strong>
+                                    </Link>
                                 </div>
                             </div>
-                            <div style={{ display: "flex", justifyContent: "center" }}>OR</div>
+                            <div style={{ display: "flex", justifyContent: "center" }}><b>OR</b></div>
                         </Form.Item>
                     </Form>
                     <div className="facebookLogin">
@@ -77,16 +83,7 @@ const Login: FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div className="footer" style={{ position: "absolute", bottom: '0' }}>
-            <Foot />
-        </div>
-
-    </div>
-
-);
-        </MainLayout>
+        </Content>
     )
 };
 
