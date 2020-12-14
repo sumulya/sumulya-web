@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import './../../../App.css';
+import { Link } from 'react-router-dom'
 import { Card } from 'antd';
 import { ShoppingOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { products } from './../../../Data/products'
@@ -41,7 +42,7 @@ const Cards: FC = () => {
         <div className="allcards">
             {products.map((product, key) => {
                 return (
-                    <div className="card" key={product.id}>
+                    <Link to={`detail/${product.id}`} className="card" key={product.id}>
                         <Card
                             title={
                                 (product.count > 0) ? (
@@ -72,7 +73,7 @@ const Cards: FC = () => {
                         >
                             <Meta className="metacard" title={product.price} description={product.name} />
                         </Card>
-                    </div>
+                    </Link>
                 );
             })}
 
