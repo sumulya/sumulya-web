@@ -4,27 +4,17 @@ import Head from '../Partials/Head';
 import Foot from '../Partials/Foot';
 import { Layout } from 'antd';
 
-const MainLayout: FC = (props) => (
-    <div className="mainlayout">
-        {/* Head Component  */}
-        {/* < Head /> */}
-
-        {/* <Layout style={{ flex: 1 }}>{props.children}</Layout> */}
-
-        {/* Footer Component */}
-        {/* <Foot /> */}
-
-
-        <Layout>
+const MainLayout: FC = (props) => {
+    return (
+        <div className="mainlayout">
+            {/* Head Component  */}
             <Head />
 
-            {props.children}
+            <Layout style={{ flex: 1 }}>{props.children}</Layout>
 
+            {/* Footer Component */}
             <Foot />
-        </Layout>
-
-    </div>
-);
-
-
+        </div>
+    )
+};
 export default MainLayout;

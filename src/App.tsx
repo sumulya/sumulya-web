@@ -3,6 +3,7 @@ import './App.css';
 import Home from './views/Pages/Home/Home';
 import Login from './views/Pages/Login/Login';
 import Register from './views/Pages/Register/Register';
+import UserProfile from './views/Pages/UserProfile/UserProfile';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Cart from './views/Pages/Cart/Cart';
 import Detail from "./views/Pages/Detail";
@@ -19,6 +20,9 @@ const App: FC = () => (
         <Route path="/cart" exact component={Cart} />
         <Route path="/detail/:id" exact component={Detail} />
         <Route path="/category/:id" exact component={CategoryProduct} />
+      </Switch>
+      <Switch>
+        <Route path="/user-profile" exact component={UserProfile} />
       </Switch>
     </Router>
   </div>
