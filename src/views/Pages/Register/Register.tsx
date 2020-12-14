@@ -29,6 +29,9 @@ const Login: FC = () => (
                 <Form.Item
                     style={{ marginBottom: "5px" }}
                     rules={[
+                        {
+                            type: 'number', message: 'The input is not valid number',
+                        },
                         { required: true, message: "Please input your phone!" }
                     ]}
                 >
@@ -68,6 +71,7 @@ const Login: FC = () => (
                     hasFeedback
                 >
                     <Input.Password
+                        style={{ borderRadius: '10px' }}
                         placeholder="Password"
                         name="password"
                     //   onChange={handleChange}
@@ -94,6 +98,7 @@ const Login: FC = () => (
                     ]}
                 >
                     <Input.Password
+                        style={{ borderRadius: '10px' }}
                         placeholder="Confirm Password"
                         name="confirmPassword"
                     //   onChange={handleChange}
@@ -130,7 +135,7 @@ const Login: FC = () => (
             <div className="authBrandingWrapper">
                 <div className="logoWeapper">
                     <Link to="/">
-                        <img src="/images/sum-logo.png" className="logo" />
+                        <img alt="logo" src="/images/sum-logo.png" className="logo" />
                     </Link>
                 </div>
             </div>

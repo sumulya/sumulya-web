@@ -5,7 +5,7 @@ const { Footer } = Layout;
 
 const Foot: FC = () => (
 
-    <Footer className="footer">© Sumulya 2020.</Footer>
+    <Footer className="footer">Sumulya © 2020.</Footer>
 
 );
 

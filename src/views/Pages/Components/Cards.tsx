@@ -1,58 +1,80 @@
 import React, { FC, useState } from 'react';
 import './../../../App.css';
+import { Link } from 'react-router-dom'
 import { Card } from 'antd';
 import { ShoppingOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { products } from './../../../Data/products'
+import { Product } from './../../../Interfaces/index';
 const { Meta } = Card;
+
 
 
 const Cards: FC = () => {
 
-    const [cartCount, setCartCount] = useState(0);
+    const [cartCount, setCartCount] = useState({});
+    const [cartItem, setCartItem] = useState({});
 
-    // const handleAdd = (product: any) => {
-    //     const index = products.indexOf(product);
-    //     products[index] = { ...product };
-    //     products[index].value++;
-    //     setCartCount({ products });
+    console.log(cartCount);
+    console.log(cartItem);
 
-    // }
+
+    const handleAdd = (product: Product) => {
+        const index = products.indexOf(product);
+        products[index] = { ...product };
+        products[index].count++;
+        setCartCount({ products });
+
+        let newItem = products[index];
+        setCartItem(newItem);
+
+    }
+    const handleSubtract = (product: Product) => {
+        const index = products.indexOf(product);
+        products[index] = { ...product };
+        products[index].count--;
+        setCartCount({ products });
+
+    }
+
+
 
     return (
         <div className="allcards">
-
             {products.map((product, key) => {
                 return (
-                    <div className="card" key={product.id}>
+                    <Link to={`detail/${product.id}`} className="card" key={product.id}>
                         <Card
                             title={
-                                (cartCount > 0) ? (
-                                    <div className="cardFunc"
-                                        style={{ textAlign: 'center', backgroundColor: '#303030', color: 'white', borderRadius: '10px', height: '30px', marginTop: '-15px' }}
-                                    ><MinusOutlined
-                                            onClick={() => setCartCount(cartCount - 1)}
+                                (product.count > 0) ? (
+                                    <div className="cardFunc">
+                                        <MinusOutlined
+                                            onClick={() => handleSubtract(product)}
                                             style={{ marginRight: '20px' }}
                                         />
-                                        {cartCount}
+                                        {product.count}
                                         <PlusOutlined
-                                            onClick={() => setCartCount(cartCount + 1)}
+                                            onClick={() => handleAdd(product)}
                                             style={{ marginLeft: '20px' }}
-                                        /></div>
+                                        />
+                                    </div>
                                 ) : (<div></div>)
                             }
 
                             extra={
-                                (cartCount === 0) ? (
-                                    <ShoppingOutlined style={{ fontSize: "15px" }} onClick={() => setCartCount(cartCount + 1)} />
+                                (product.count === 0) ? (
+                                    <ShoppingOutlined style={{ fontSize: "15px" }}
+                                        onClick={() => handleAdd(product)}
+                                    />
                                 ) : (<div></div>)
                             }
                             hoverable
+                            bordered={false}
                             style={{ width: 200 }}
                             cover={<img alt="example" src={product.imgsrc} />}
                         >
                             <Meta className="metacard" title={product.price} description={product.name} />
                         </Card>
-                    </div>
+                    </Link>
                 );
             })}
 

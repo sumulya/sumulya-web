@@ -4,7 +4,6 @@ import Head from '../Partials/Head';
 import Foot from '../Partials/Foot';
 import { Layout } from 'antd';
 
-
 const MainLayout: FC = (props) => {
     return (
         <div className="mainlayout">
@@ -18,6 +17,4 @@ const MainLayout: FC = (props) => {
         </div>
     )
 };
-
-
 export default MainLayout;
