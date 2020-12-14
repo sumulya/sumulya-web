@@ -77,6 +77,15 @@ const Login: FC = () => {
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div className="footer" style={{ position: "absolute", bottom: '0' }}>
+            <Foot />
+        </div>
+
+    </div>
+
+);
         </MainLayout>
     )
 };
