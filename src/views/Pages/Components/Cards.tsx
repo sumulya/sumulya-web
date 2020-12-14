@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState } from 'react';
 import './../../../App.css';
 import { Link } from 'react-router-dom'
 import { Card } from 'antd';
@@ -14,6 +14,8 @@ const Cards: FC = () => {
     const [cartCount, setCartCount] = useState({});
     const [cartItem, setCartItem] = useState({});
 
+    console.log(cartCount);
+    console.log(cartItem);
 
 
     const handleAdd = (product: Product) => {

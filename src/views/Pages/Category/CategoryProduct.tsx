@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Button, Layout } from 'antd';
 import Side from '../../Partials/Side';
-import Banner from '../Components/Banner';
 import Cards from '../Components/Cards';
 import Head from '../../Partials/Head';
 import Foot from '../../Partials/Foot';

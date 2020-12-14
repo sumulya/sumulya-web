@@ -1,4 +1,4 @@
-import React, { FC, useState, useContext } from 'react';
+import React, { FC, useState } from 'react';
 import './../../App.css';
 import { Link } from 'react-router-dom';
 import { Badge, Input, Layout, Drawer } from 'antd';
@@ -20,6 +20,7 @@ const Head: FC = () => {
     };
 
     const [cartCount, setCartCount] = useState({});
+    console.log(cartCount);
 
     const handleAdd = (product: Product) => {
         const index = cartProducts.indexOf(product);
