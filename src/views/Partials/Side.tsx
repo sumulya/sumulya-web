@@ -7,12 +7,17 @@ const { SubMenu } = Menu;
 const { Sider } = Layout;
 
 const Side: FC = () => (
-    <Sider width={270} style={{ height: "fit-content" }}>
+    <Sider width={270} style={{
+        overflow: 'auto',
+        height: '100vh',
+        position: 'fixed',
+        left: 0,
+    }}>
         <Menu
             mode="inline"
             // defaultSelectedKeys={['1']}
             // defaultOpenKeys={['sub1']}
-            style={{ height: '100%' }}
+            style={{ height: '100%', paddingTop: '50px' }}
         ><h3 style={{ margin: "20px 10px" }}>All Categories</h3>
             <SubMenu key="sub1" icon={<AppleFilled />} style={{ fontWeight: "bold" }} title="Vegetables &amp; Fruits">
                 <Menu.Item key="1"><Link to="/category/1">-Fruits</Link></Menu.Item>
