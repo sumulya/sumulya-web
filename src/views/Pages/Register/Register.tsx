@@ -130,7 +130,7 @@ const Login: FC = () => (
             <div className="authBrandingWrapper">
                 <div className="logoWeapper">
                     <Link to="/">
-                        <img src="/images/sum-logo.png" className="logo" />
+                        <img alt="logo" src="/images/sum-logo.png" className="logo" />
                     </Link>
                 </div>
             </div>
