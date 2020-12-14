@@ -45,7 +45,7 @@ const Head: FC = () => {
                     </Link>
                 </div>
                 <div className="searchbox">
-                    <Search style={{ width: "75%" }} placeholder="Search Products In Sumulya" onSearch={value => console.log(value)} enterButton />
+                    <Search className="search" placeholder="Search Products In Sumulya" onSearch={value => console.log(value)} enterButton />
                 </div>
                 <div className="rightHead">
                     <Link to="/login">

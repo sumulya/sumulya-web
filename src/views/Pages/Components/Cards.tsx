@@ -44,6 +44,7 @@ const Cards: FC = () => {
                 return (
                     <Link to={`detail/${product.id}`} className="card" key={product.id}>
                         <Card
+                            bordered={false}
                             title={
                                 (product.count > 0) ? (
                                     <div className="cardFunc">
