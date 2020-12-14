@@ -89,12 +89,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin:60px 0px;
+    margin:15vh 0;
 }
 
 .login{
     background: linear-gradient(90deg, #f9ab7b91 13%, #efe09b 50%, #cad89c 90%);
-    height:600px;
+    height:100vh;
 }
 
 .cartPage{

@@ -37,7 +37,7 @@ const Head: FC = () => {
     }
 
     return (
-        <Header className="header">
+        <Header className="header" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
             <div className="heaad">
                 <div className="logo">
                     <Link to="/">
