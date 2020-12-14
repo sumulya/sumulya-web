@@ -8,6 +8,7 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Cart from './views/Pages/Cart/Cart';
 import Detail from "./views/Pages/Detail";
 import CategoryProduct from './views/Pages/Category/CategoryProduct';
+import GroupProduct from './views/Pages/Group/GroupProduct';
 
 
 const App: FC = () => (
@@ -23,6 +24,9 @@ const App: FC = () => (
       </Switch>
       <Switch>
         <Route path="/user-profile" exact component={UserProfile} />
+      </Switch>
+      <Switch>
+        <Route path="/group/:id" exact component={GroupProduct} />
       </Switch>
     </Router>
   </div>

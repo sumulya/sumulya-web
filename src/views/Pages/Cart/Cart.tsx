@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import Foot from '../../Partials/Foot';
 import Head from '../../Partials/Head';
 import { Typography, Form, Input, Button, Tag } from 'antd';
-// import CheckableTag from "antd/lib/tag/CheckableTag";
+import CheckableTag from "antd/lib/tag/CheckableTag";
 import { cartProducts } from './../../../Data/products';
 import { Product } from './../../../Interfaces/index';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
@@ -10,18 +10,18 @@ import './../../../App.css';
 import MainLayout from '../../Layouts/MainLayout';
 
 const { Text, Title } = Typography;
-const tagsFromServer = ['Cash', 'E-Sewa'];
+const tagsFromServer = ['Cash on delivery', 'E-Sewa'];
 
 
 const Cart: FC = () => {
 
-    // const [selectedtag, setselectedTag] = useState([]);
+    const [selectedtag, setselectedTag] = useState(['Cash on delivery']);
 
-    // const handleChange = (tag: string, checked: boolean) => {
-    //     const nextSelectedTag = checked ? [...selectedtag, tag] : selectedtag.filter(t => t !== tag);
-    //     setselectedTag(nextSelectedTag);
+    const handleChange = (tag: string, checked: boolean) => {
+        const nextSelectedTag = checked ? [tag] : selectedtag.filter(t => t !== tag);
+        setselectedTag(nextSelectedTag);
 
-    // }
+    }
 
     const [cartCount, setCartCount] = useState({});
     console.log(cartCount);
@@ -136,19 +136,18 @@ const Cart: FC = () => {
                                 />
                             </Form.Item>
 
-                    <Text type="secondary">Payment with </Text>
+                    <Text type="secondary">Payment with :</Text>
                     <br />
-                    <Tag color="#108ee9" className="Tag">Cash on delivery</Tag>
-                    <Tag color="#87d068" className="Tag">E-Sewa</Tag>
-                    {/* {tagsFromServer.map(tag => (
+                    {tagsFromServer.map(tag => (
                         <CheckableTag
+                            className="paymentMethod"
                             key={tag}
                             checked={selectedtag.indexOf(tag) > -1}
                             onChange={checked => handleChange(tag, checked)}
                         >
                             {tag}
                         </CheckableTag>
-                    ))} */}
+                    ))}
                     <br /><br />
                     <Text type="secondary">Please fill up the following information so that we can call you for your delivery information.</Text>
                     <br />
